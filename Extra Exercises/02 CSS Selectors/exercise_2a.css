@@ -1,0 +1,20 @@
+div {
+    background-color: blue;
+}
+
+span {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.sivi {
+    background-color: grey;
+}
+
+#treci {
+    color: white;
+    background-color: red;
+}
