@@ -1,0 +1,75 @@
+body {
+    font-family: 'Open Sans';
+}
+
+legend {
+    color: rgb(88, 87, 87);
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+input {
+    border: none;
+    border-bottom: solid 2px lightgrey;
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+}
+
+input:focus {
+    background-color: rgb(235, 248, 235);
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: silver;
+}
+
+#month, #year {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.private input {
+    width: 100px;
+}
+
+#save {
+    width: 15px;
+}
+
+.save label {
+    display: inline-block;
+}
+
+::placeholder {
+    color: grey;
+}
+
+#card_no {
+    background: url(https://icons.iconarchive.com/icons/iconsmind/outline/256/Credit-Card-2-icon.png) no-repeat left;
+    background-size: 40px;
+    text-indent: 50px;
+}
+
+#card_no:focus {
+    background-color: rgb(235, 248, 235);
+}
+
+#pay {
+    color: white;
+    font-size: 14px;
+    width: 120px;
+    height: 40px;
+    background-color: #63cc6c;
+    box-shadow: 5px 10px rgba(211, 211, 211, 0.286);
+}
