@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Osnovni podaci:</legend>
+            <!-- najbolje staviti div i klasu pa sredjivati formu -->
+<!--Text-->
+            <p>
+                <label for="ime">Ime i prezime:</label>
+                <input type="text" name="ime" maxlength="8" value="" placeholder="prvo ime, onda prezime" id="ime">
+            </p>
+
+            <p>
+                <label for="user">Korisnicko ime:</label>
+                <input type="text" name="user" maxlength="12" value="" placeholder="user" id="user">
+            </p>
+<!--Password-->
+            <p>
+                <label for="pass">Lozinka:</label>
+                <input type="password" name="pass" maxlength="15" placeholder="sifra" id="pass">
+            </p>
+<!--Hidden-->
+            <input type="hidden" name="hidden" id="hidden" value="100">
+<!--Search-->
+            <p>
+                <label for="">Search:</label>
+                <input type="search" name="" id="">
+            </p>
+<!--Number-->
+            <p>
+                <label for="years">Godine:</label>
+                <input type="number" id="years" step="2" min="18">
+            </p>
+<!--email-->
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </p>
+<!--URL-->
+            <p>
+                <label for="url">Link:</label>
+                <input type="url" id="url">
+            </p>
+<!--Date-->
+            <p>
+                <label for="date">Datum:</label>
+                <input type="date" id="date">
+            </p>
+<!--Time-->
+            <p>
+                <label for="time">Vreme:</label>
+                <input type="time" id="time">
+            </p>
+<!--Radio-->
+            <p>
+                <label for="sex">Pol:</label>
+                <input type="radio" name="sex" id="male" value="Muski"> Muski
+                <input type="radio" name="sex" id="female" value="Zenski"> Zenski
+                <input type="radio" name="sex" id="no_say" value="No say" checked>Ne zelim da kazem
+            </p>
+<!--Checkbox-->
+            <p>
+                <label for="pj">Odaberite programski jezik:</label>
+                <input type="checkbox" name="pj" id="html" value="html"> HTML
+                <input type="checkbox" name="pj" id="css" value="css"> CSS
+                <input type="checkbox" name="pj" id="js" value="js" checked> JavaScript
+            </p>
+<!--Color-->
+            <p>
+                <label for="color"></label>
+                <input type="color" name="color" id="color"> Choose your color
+            </p>
+<!--File-->
+            <p>
+                <label for="file"></label>
+                <input type="file" name="file" id="file">
+            </p>
+<!--Select-->
+            <p>
+                <label for="city"></label>
+                <select name="city" id="grad">
+<!--Placeholder koji ne moze da se selektuje-->
+                    <option value="" disabled selected hidden>Choose City</option>
+
+                    <optgroup label="Centralna Srbija">
+                        <option value="kg">Kragujevac</option>
+                        <option value="bg">Beograd</option>
+                    </optgroup>
+                    <optgroup label="Juzna Srbija">
+                        <option value="ni">Nis</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <p>
+                <label for="exp"></label>
+                <textarea name="exp" id="exp" cols="50" rows="10">Add your experiences</textarea>
+            </p>
+
+            <input type="submit" name="submit" value="Posalji">
+        </fieldset>
+    </form>
+
+    
+</body>
+</html>

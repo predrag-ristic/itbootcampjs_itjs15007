@@ -1,0 +1,21 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+fieldset {
+    border: solid darkgrey 3px;
+}
+
+div {
+    margin-left: 50px;
+    padding: 5px;
+}
+input {
+    margin-left: 50px;
+}
+
+.footer {
+    margin-top: 10px;
+}

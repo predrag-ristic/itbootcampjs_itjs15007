@@ -4,9 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homework 04</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <form action="test.php">
+        <fieldset>
+            <legend>Login details</legend>
+
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">                
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">               
+            </div>
+
+            <div>
+                <label for="pass">Password:</label>
+                <input type="password" name="pass" id="pass">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your feedback</legend>
+            <div>
+                <p>Please check all the emotions that apply to you:</p>
+
+                <div>
+                    <label for="angry">Angry</label>
+                    <input type="checkbox" name="angry" id="angry">
+                </div>
+
+                <div>
+                    <label for="sad">Sad</label>
+                    <input type="checkbox" name="sad" id="sad">
+                </div>
+
+                <div>
+                    <label for="happy">Happy</label>
+                    <input type="checkbox" name="happy" id="happy" checked>
+                </div>
+
+                <div>
+                    <label for="ambiv">Ambivalent</label>
+                    <input type="checkbox" name="ambiv" id="ambiv">
+                </div>
+
+                <p>How satisfied were you with our service?</p>
+
+                <div>
+                    <label for="ver_sat">Very satisfied</label>
+                    <input type="radio" name="ver_sat" id="ver_sat">
+                </div>
+
+                <div>
+                    <label for="sat">Satisfied</label>
+                    <input type="radio" name="sat" id="sat">
+                </div>
+
+                <div>
+                    <label for="not_care">Didn't care</label>
+                    <input type="radio" name="not_care" id="not_care">
+                </div>
+
+                <div>
+                    <label for="dissat">Dissatisfied</label>
+                    <input type="radio" name="dissat" id="dissat">
+                </div>
+
+                <div>
+                    <label for="vdissat">Very dissatisfied</label>
+                    <input type="radio" name="vdissat" id="vdissat">
+                </div>
+            </div>
+
+            <div>
+                <label for="com">Further comments:</label>
+                <textarea name="com" id="com" cols="20" rows="3"></textarea>
+            </div>
+        </fieldset>
+
+        <div class="footer">
+            <label for="photo">Bio photo:</label>
+            <input type="file" name="photo" id="photo">
+        </div>
+
+        <div>
+            <label for="location">Location visited:</label>
+            <select name="location" id="location">
+                <option value="" disabled selected hidden> Select location</option>
+                <option value="ni">Nis</option>
+                <option value="kg">Kragujevac</option>
+                <option value="bg">Belgrade</option>
+            </select>
+
+        </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+
+            <div>
+                <input type="reset" value="reset">
+            </div>
+        </form>
 </body>
 </html>
