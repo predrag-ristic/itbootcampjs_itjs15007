@@ -22,11 +22,6 @@ input:focus {
     background-color: rgb(235, 248, 235);
 }
 
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 label {
     display: block;
     font-size: 12px;

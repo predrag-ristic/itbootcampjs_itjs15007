@@ -1,0 +1,19 @@
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border: inset 5px lightgrey;
+    border-collapse: collapse;
+    background-color: rgb(240, 238, 238);
+    width: 50%;
+    height: 20px;
+}
+
+th, td {
+    border-collapse: collapse;
+    border: inset 5px lightgrey;
+}
+
+.casovi {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 5px;
+}

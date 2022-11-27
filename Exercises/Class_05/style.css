@@ -18,10 +18,18 @@ th {
     background-color: yellow;
 }
 
-.colhigh th:nth-child(3) {
+.colhigh th:nth-child(3), .colhigh td:nth-child(3) {
     background-color: yellow;
-
 }
-.colhigh td:nth-child(3) {
+
+.rowhigh tr:nth-child(odd) {
+    font-style: italic;
+}
+
+.colhigh tr:nth-child(even):hover {
     background-color: yellow;
+}
+
+.colhigh tr:nth-child(3n) {
+    color: blue;
 }

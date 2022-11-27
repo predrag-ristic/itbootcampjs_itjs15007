@@ -17,25 +17,27 @@
 
         <div>
             <label for="card_no">CARD NUMBER</label>
-            <input type="number" name="card_no" id="card_no">
+            <input type="text" name="card_no" id="card_no" maxlength="16">
         </div>
 
         <div class="private">
             <div>
                 <label for="exp">EXPIRATION DATE</label>
-                <input type="number" maxlength="2" name="exp" id="month" placeholder="MM">
-                <input type="number" maxlength="2" name="exp" id="year" placeholder="YY">
+                <input type="text" maxlength="2" name="exp" id="month" placeholder="MM">
+                <input type="text" maxlength="2" name="exp" id="year" placeholder="YY">
             </div>
 
             <div>
                 <label for="cvc">CVC</label>
-                <input type="number" maxlength="3" name="cvc" id="cvc" placeholder="123">
+                <input type="text" maxlength="3" name="cvc" id="cvc" placeholder="123">
             </div>
 
-            <div class="save">
-                <input type="checkbox" name="save" id="save" checked>
-                <label for="save">Save my card for future purchases</label>
-            </div>
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="save" id="save" checked></td>
+                    <td><label for="save">Save my card for future purchases</label></td>
+                </tr>
+            </table>
         </div>
 
         <div>

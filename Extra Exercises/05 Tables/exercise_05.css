@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border: solid 3px rgb(178, 117, 38);
+    background-image: url(https://images.unsplash.com/photo-1503435980610-a51f3ddfee50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: 60% 70%;
+}
+
+th, td {
+    border: solid 2px rgb(177, 126, 37);
+    width: 100px;
+    height: 50px;
+}
+
+img {
+    width: 80px;
+}
+
+a {
+    font-size: 30px;
+    text-decoration: none;
+    color: darkgreen;
+}

@@ -1,0 +1,36 @@
+a img {
+    width: 330px; 
+    height: 400px; 
+    object-fit: cover;
+    object-position: 50%;
+    margin: 20px;
+}
+
+p {
+    text-align: justify;
+    width: 1450px;
+}
+
+.links a {
+    margin-left: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.favimg {
+    width: 165px; 
+    height: 200px; 
+    object-fit: cover;
+    object-position: 50%;
+    margin: 20px;
+}
+
+.favp {
+    width: 530px;
+}
+
+span {
+    font-weight: bold;
+}
