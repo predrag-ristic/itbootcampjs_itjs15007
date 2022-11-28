@@ -1,0 +1,11 @@
+#s1, #s2 {
+    display: inline-block;
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 20px 200px 0 20px;
+    margin-right: 20px;
+}
+
+#s2 {
+    background-color: grey;
+}

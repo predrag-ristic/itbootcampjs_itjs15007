@@ -1,9 +1,18 @@
 table, td {
     border: solid 3px black;
     border-collapse: collapse;
+    width: 400px;
+    height: 50px;
 }
 
-td {
+.row_2 {
+    width: 200px;
+}
+
+.row_3 {
     width: 100px;
-    height: 50px;
+}
+
+.merge {
+    width: 200px;
 }
