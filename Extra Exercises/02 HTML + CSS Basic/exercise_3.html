@@ -29,8 +29,10 @@
                     <td><input type="text"></td>
                 </tr>
                 <tr>
-                    <td>Vlasnik:</td>
-                    <td><input type="radio" checked>Poznat <input type="text" placeholder="JMBG vlasnika"><br><input type="radio">Nepoznat</td>
+                    <td><label for="vlasnik"></label></td>
+                    <td><input type="radio" name="vlasnik" checked>Poznat <input type="text" maxlength="13" placeholder="JMBG vlasnika">
+                        <br>
+                    <input type="radio" name="vlasnik">Nepoznat</td>
                 </tr>
             </table>
 
@@ -43,7 +45,7 @@
             </ul>
 
 
-            <div class="button"><button>Posalji</button></div>
+            <div class="button"><input type="submit" name="submit" id="submit" value="Posalji"></div>
         </div>
 </body>
 </html>
