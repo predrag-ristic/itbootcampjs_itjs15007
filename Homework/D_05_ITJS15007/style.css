@@ -1,0 +1,77 @@
+/* Ovako sam uradio pre nego da predjemo pozicioniranje pa rekoh da i to ostavim jer sam ga napravio da izgleda onako kako je u zadatku */
+
+/* body {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+section {
+    padding-left: auto;
+    padding-right: auto;
+    width: 100%;
+}
+
+div {
+    display: inline-block;
+    margin: 0 15px;
+    width: 300px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+h3 {
+    text-align: center;
+}
+
+div p {
+    text-align: center;
+}
+
+aside {
+    width: 100%;
+    text-align: justify;
+} */
+
+
+
+body {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+section div {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+img {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+}
+
+aside {
+    position: relative;
+    top: 400px;
+    width: 100%;
+    text-align: justify;
+}
