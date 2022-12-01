@@ -1,0 +1,29 @@
+div {
+    width: 200px;
+    border: 1px solid black;
+}
+
+span {
+    color: red;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border: 2px dotted red;
+    object-fit: cover;
+    object-position: 90% 10%;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+h3 {
+    color: blue;
+}
+
+p {
+    overflow: scroll;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+}
