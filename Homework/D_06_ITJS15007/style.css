@@ -17,6 +17,10 @@
         width: 100%;
     }
 
+    .row .col-4 {
+        display: none;
+    }
+
     .col-9 .col-6 {
         width: 50%;
     }
