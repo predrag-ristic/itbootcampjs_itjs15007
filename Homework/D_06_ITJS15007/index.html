@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Homework 06</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="test.php">
+        <div class="row">
+            <label for="name" class="col-3">Ime i prezime</label>
+
+            <input type="text" name="name" id="name" placeholder="Unesite svoje ime i prezime.." class="col-9">
+        </div>
+
+        <div class="row">
+            <label for="search" class="col-3">Pretražite</label>
+            <div class="col-9">
+                <input type="search" name="search" id="search" placeholder="Pretražite.." class="col-6">
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="country" class="col-3">Zemlja</label>
+
+            <select name="country" id="country" class="col-9">
+                <option value="italy">Italija</option>
+                <option value="germany">Nemačka</option>
+                <option value="Spain">Španija</option>
+                <option value="czech">Češka</option>
+                <option value="swiss">Svajcarska</option>
+                <option value="austria">Austrija</option>
+                <option value="france">Francuska</option>
+                <option value="portugal">Portugalija</option>
+                <option value="nether">Holandija</option>
+                <option value="belgium">Belgija</option>
+                <option value="finland">Finska</option>
+                <option value="sweden">Švedska</option>
+                <option value="norway">Norveška</option>
+                <option value="lux">Luksemburg</option>
+                <option value="gr_britain">Velika Britanija</option>
+                <option value="irelan">Irska</option>
+                <option value="iceland">Island</option>
+                <option value="malta">Malta</option>
+                <option value="greece">Grčka</option>
+                <option value="turkey">Turska</option>
+                <option value="bulgaria">Bugarska</option>
+                <option value="hungary">Mađarska</option>
+                <option value="slovakia">Slovačka</option>
+                <option value="slovenia">Slovenija</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="descr" class="col-3">Opis</label>
+
+            <textarea name="descr" id="descr" rows="10" class="col-9" placeholder="Napišite neki opis..."></textarea>
+        </div>
+
+        <div class="row">
+            <input type="submit" name="submit" id="submit" value="Potvrdite" >
+        </div>
+    </form>
+</body>
+</html>
