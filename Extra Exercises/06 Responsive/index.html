@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air SERBIA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row">
+        <header class="col-12">
+            <h2>Air SERBIA</h2>
+        </header>
+    </div>
+    
+    <div class="row">
+        <nav class="col-12">
+            <ul>
+                <li><a href="https://www.airserbia.com"><img src="images/airserbia.png" alt="airserbia_logo">&nbsp;</a></li>
+                <li><a href="https://www.airserbia.com/informacije/letovi/red-letenja">Letovi</a></li>
+                <li><a href="https://www.airserbia.com/destinacije">Destinacije</a></li>
+                <li><a href="https://www.airserbia.com/informacije">Informacije</a></li>
+                <li><a href="https://www.airserbia.com/kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="row">
+        <section class="col-5">
+            <h3>Letovi</h3>
+            <a href="https://www.airserbia.com/informacije/letovi/red-letenja"><img src="images/letovi.jpg" alt="letovi"></a>
+        </section>
+
+        <section class="col-6">
+            <h3>Destinacije</h3>
+            <a href="https://www.airserbia.com/destinacije"><img src="images/destinacije.jpg" alt="destinacije"></a>
+        </section>
+        
+        <aside class="col-1">&nbsp;</aside>
+    </div>
+
+    <div class="row destrow">
+        <aside class="col-5">&nbsp;</aside>
+
+        <section class="col-6">
+            <ul class="destinations">
+                <li><a href="">Evropa</a></li>
+                <li><a href="">Azija</a></li>
+                <li><a href="">Afrika</a></li>
+                <li><a href="">Amerika</a></li>
+            </ul>
+        </section>
+
+        <aside class="col-1">&nbsp;</aside>
+    </div>
+
+    <div class="row">
+        <section class="col-5">
+            <h3>Informacije</h3>
+            <a href="https://www.airserbia.com/informacije"><img src="images/informacije.jpg" alt="informacije"></a>
+        </section>
+
+        <section class="col-6">
+                <h3>Kontakt</h3>
+                <form action="text.php" method="post">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Unesite email">                        
+                    </div>
+                    <div>
+                        <label for="message">Tekst poruke:</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>                        
+                    </div>
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" name="cond" id="cond"></td>
+                            <td><label for="cond">prihvatite uslove koriscenja</label></td>
+                        </tr>
+                        
+                    </table>
+                    <div>
+                        <input type="submit" name="submit" id="submit" value="Posaljite">                        
+                    </div>
+            </form>
+        </section>
+
+        <aside class="col-1">&nbsp;</aside>
+    </div>
+</body>
+</html>
