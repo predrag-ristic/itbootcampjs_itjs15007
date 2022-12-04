@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* For mobile */
+
+@media only screen and (max-width: 500px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* For tablet */
+
+@media only screen and (min-width: 501px) and (max-width:999px) {
+    [class*="col-t-"] {
+        float: left;
+    }
+
+    .col-t-1 {
+        width: 8.33%;
+    }
+    
+    .col-t-2 {
+        width: 16.66%;
+    }
+    
+    .col-t-3 {
+        width: 25%;
+    }
+
+    .col-t-4 {
+        width: 33.33%;
+    }
+
+    .col-t-5 {
+        width: 41.66%;
+    }
+
+    .col-t-6 {
+        width: 50%;
+    }
+
+    .col-t-7 {
+        width: 58.33%;
+    }
+
+    .col-t-8 {
+        width: 66.66%;
+    }
+
+    .col-t-9 {
+        width: 75%;
+    }
+
+    .col-t-10 {
+        width: 83.33%;
+    }
+
+    .col-t-11 {
+        width: 91.66%;
+    }
+
+    .col-t-12 {
+        width: 100%;
+    }
+}
+
+/* For desktop */
+
+@media only screen and (min-width: 1000px) {
+    [class*="col-"] {
+        float: left;
+    }
+
+    .col-1 {
+        width: 8.33%;
+    }
+    
+    .col-2 {
+        width: 16.66%;
+    }
+    
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+/* Header */
+.head {
+    background-image: url(images/city_skiline.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+
+header input {
+    height: 45px;
+    width: 200px;
+    border: 3px solid #6cc091;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #6cc091;
+    margin-bottom: 150px;
+    margin-top: 150px;
+}
+
+header p {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header hr {
+    margin: 80px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: bold;
+    font-size: 14px;
+}
+
+header li {
+    list-style: none;
+    padding-top: 20px;
+}
+
+header .left {
+    display: inline-block;
+    float: left;
+}
+
+.left li {
+    display: block;
+    float: left;
+}
+
+header .right {
+    display: inline-block;
+    float: right;
+}
+
+.right li {
+    display: block;
+    float: left;
+    padding-left: 30px;
+}
+
+
+/* Section */
+section div {
+float: left;
+width: 50%;
+padding: 30px 30px 70px 30px;
+}
+
+section img {
+    border-radius: 100%;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section p {
+    color: #555555;
+    text-align: center;
+    padding-bottom: 40px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h3 {
+    color: #555555;
+    text-align: center;
+    font-size: 24px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section input {
+    height: 45px;
+    width: 200px;
+    border: 3px solid #6cc091;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #6cc091;
+}
+
+
+/* Form */
+.form {
+    background-color: #6cc091;
+}
+
+.form div {
+    padding-bottom: 20px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+label {
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #8dcca9;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.name, .email {
+    width: 50%;
+    float: left;
+}
+
+.name {
+    padding-right: 20px;
+}
+
+.email {
+    padding-left: 20px;
+}
+
+::placeholder {
+    color: #8dcca9;
+}
+
+#submit {
+    height: 45px;
+    width: 200px;
+    border: 3px solid white;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+form p {
+    color: #8dcca9;
+    text-align: center;
+    font-size: 11px;
+    padding: 20px;
+}

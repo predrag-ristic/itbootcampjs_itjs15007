@@ -1,18 +1,38 @@
-table, td {
+.main {
     border: solid 3px black;
     border-collapse: collapse;
     width: 400px;
     height: 50px;
+    box-sizing: border-box;
 }
 
-.row_2 {
-    width: 200px;
+td {
+    border: solid 3px black;
+    width: 400px;
+    height: 50px;
 }
 
-.row_3 {
-    width: 100px;
+/* First table */
+.middle, .bottom {
+    border-collapse: collapse;
+    border-top: hidden;
+    width: 400px;
+    height: 50px;
 }
 
-.merge {
-    width: 200px;
+/* Second table */
+.m-col1 {
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    border-collapse: collapse;
 }
+
+.m-col2 {
+    border-bottom: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    border-collapse: collapse;
+}
+
+/* Third table */
