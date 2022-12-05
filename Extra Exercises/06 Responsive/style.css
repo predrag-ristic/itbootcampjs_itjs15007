@@ -158,10 +158,6 @@ section img {
     margin-top: -35px;
 }
 
-.destrow .col-6 {
-    padding-right: 0;
-}
-
 /* Form */
 label:nth-child(1), label:nth-child(2) {
     display: block;
@@ -183,22 +179,18 @@ textarea {
     padding: 5px;
 }
 
-#submit {
-    width: 70px;
-    height: 30px;
-    background-color: #3273d1;
-    color: white;
-    border-radius: 5px;
-}
-
-.checkbox {
-    display: inline;
-}
-
 table {
     padding: 10px 0;
 }
 
 td input {
     margin-right: 5px;
+}
+
+#submit {
+    width: 70px;
+    height: 30px;
+    background-color: #3273d1;
+    color: white;
+    border-radius: 5px;
 }
