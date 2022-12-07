@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predrag Ristic</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="row">
         <header class="col-12">
-            <h3 id="head">IT Bootcamp Nis (5.12.2022.)</h3>
+            <h3 id="head"></h3>
         </header>
     </div>
 
@@ -35,24 +34,27 @@
             <img src="images/gold_medal copy.png" alt="gold_medal" class="col-4">
     </div>
 
-    <div class="row">
+    <div>
         <form action="test.php" method="get">
             <h4>Prijavite se</h4>
-            <div>
+            <div class="row">
                 <label for="name" class="col-4">Ime i prezime:</label>
                 <input type="text" name="name" id="name" class="col-8">     
             </div>
 
-            </div>
+            <div class="row">
                 <label for="email" class="col-4">E-mail:</label>
                 <input type="email" name="email" id="email" class="col-8">
-            <div>
+            </div>
+
+            <div class="row">
                 <label for="letter" class="col-4">Motivaciono pismo:</label>
                 <textarea name="letter" id="letter" cols="30" rows="2" class="col-8"></textarea>    
             </div>
 
-            <div>
+            <div class="row">
                 <input type="submit" name="submit" id="submit" value="Posalji" class="col-4">
+                <div class="col-8">&nbsp;</div>
             </div>
         </form>
     </div>
@@ -62,6 +64,6 @@
             <h3>Predrag Ristic</h3>
         </footer>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>

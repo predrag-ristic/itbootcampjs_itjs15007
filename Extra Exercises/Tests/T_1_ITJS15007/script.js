@@ -1,7 +1,7 @@
-let date = new Date(day, mon, year);
+let date = new Date();
 
-let day = date.getDay();
-let mon = date.getMonth();
+let day = date.getDate();
+let mon = date.getMonth() + 1;
 let year = date.getFullYear();
 
-document.getElementById('head').innerHTML = date.('IT Bootcamp Nis' + '(' + day + '.' + mon + "." + year + ')');
+document.getElementById('head').innerHTML = ('IT Bootcamp Nis ' + '(' + day + '.' + mon + "." + year + ')');

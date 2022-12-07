@@ -37,6 +37,7 @@ else
 let u = 8000;
 let kcal = u / 4.1868;
 console.log(`Dnevni unos iznosi ${kcal} kalorija`);
+
 if(kcal < 2000)
 {
     console.log("Potrebno je uvecati dnevni unos.");
