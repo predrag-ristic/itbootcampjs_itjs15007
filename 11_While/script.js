@@ -1,26 +1,26 @@
 // Ispis poruke Zdravo pet puta
-// let i = 1;
+let i = 1;
 
-// while(i <= 5)
-// {
-//     console.log(`Zdravo` + i);
-//     i++;
-// }
+while(i <= 5)
+{
+    console.log(`Zdravo` + i);
+    i++;
+}
 
-// console.log(`Poruka nakon WHILE petlje.`);
-// console.log(`Vrednost promenljive i nakon whle perlje je: ${i}`);
+console.log(`Poruka nakon WHILE petlje.`);
+console.log(`Vrednost promenljive i nakon whle perlje je: ${i}`);
 
 // // Ispis brojeva od 1 do 5
-// i = 1;
-// console.log(i);
+i = 1;
+console.log(i);
 
-// while(i <= 5)
-// {
-//     console.log(i);
-//     i++;
-// }
+while(i <= 5)
+{
+    console.log(i);
+    i++;
+}
 
-// console.log(`Vrednost promenljive i nakon whle perlje je: ${i}`);
+console.log(`Vrednost promenljive i nakon whle perlje je: ${i}`);
 
 
 
@@ -39,21 +39,21 @@ WHILE   ->  Blok naredbi se izvrsava 0, 1, 2, 3, 4 .......
 */
 
 // Zadatak 1a
-// i = 1;
-// let poruka = ""
-// while(i <= 20)
-// {
-    // poruka += i + " ";  // poruka = poruka + i + " ";
-    // i++; // i += 1  // i = i + 1
-// }
-// console.log(poruka);
+i = 1;
+let poruka = ""
+while(i <= 20)
+{
+    poruka += i + " ";  // poruka = poruka + i + " ";
+    i++; // i += 1  // i = i + 1
+}
+console.log(poruka);
 
 // Zadatak 1b
-// while(i <= 20)
-// {
-//     console.log(i);
-//     i++;
-// }
+while(i <= 20)
+{
+    console.log(i);
+    i++;
+}
 
 /*
 
@@ -70,20 +70,21 @@ WHILE   ->  Blok naredbi se izvrsava 0, 1, 2, 3, 4 .......
 
 // Zadatak 2
 // Nacin 1
-// i = 20;
-// while(i >= 1)
-// {
-//     console.log(i);
-//     i--;    // i -= 1   // i = i - 1
-// }
+i = 20;
+while(i >= 1)
+{
+    console.log(i);
+    i--;    // i -= 1   // i = i - 1
+}
 
 // Nacin 2
-// i = 1;
-// while(i <= 20)
-// {
-//     console.log(21 - i);
-//     i++;
-// }
+i = 1;
+while(i <= 20)
+{
+    console.log(21 - i);
+    i++;
+}
+
 /*
 i = 1   ->   20 = 21 - i
 i = 2   ->   19 = 21 - i
@@ -95,23 +96,23 @@ i = 20   ->   1 = 21 - i
 
 // Zadatak 3
 // Nacin 1
-// i = 1;
-// while(i<=20)
-// {
-//     if(i%2==0)
-//     {
-//         console.log(i);
-//     }
-//     i++; // Izvan IF petlje kako bi se obavezno izvrsilo
-// }
+i = 1;
+while(i<=20)
+{
+    if(i%2==0)
+    {
+        console.log(i);
+    }
+    i++; // Izvan IF petlje kako bi se obavezno izvrsilo
+}
 
 // Nacin 2
-// i=2;
-// while(i<=20)
-// {
-//     console.log(i);
-//     i+=2;
-// }
+i=2;
+while(i<=20)
+{
+    console.log(i);
+    i+=2;
+}
 
 /*
 #       |       i
@@ -123,60 +124,60 @@ i = 20   ->   1 = 21 - i
 
 // Zadatak 4
 // Nacin 1
-// let n = 5;
-// i = 1;
-// while(i<=n)
-// {
-//     if(i%3==0)
-//     {
-//         document.write(`<p style='color:red'>Ovo je tekst ${i}. paragrafa</p>`);
-//     }
-//     else if(i%3==1)
-//     {
-//         document.write(`<p style='color:blue'>Ovo je tekst ${i}. paragrafa</p>`);
-//     }
-//     else
-//     {
-//         document.write(`<p>Ovo je tekst ${i}. paragrafa</p>`);
-//     }
-//     i++;
-// }
+let n = 5;
+i = 1;
+while(i<=n)
+{
+    if(i%3==0)
+    {
+        document.write(`<p style='color:red'>Ovo je tekst ${i}. paragrafa</p>`);
+    }
+    else if(i%3==1)
+    {
+        document.write(`<p style='color:blue'>Ovo je tekst ${i}. paragrafa</p>`);
+    }
+    else
+    {
+        document.write(`<p>Ovo je tekst ${i}. paragrafa</p>`);
+    }
+    i++;
+}
 
 // Nacin 2
-// n = 7;
-// i = 1
-// while(i <= n)
-// {
-//     if(i % 3 == 0)
-//     {
-//         document.body.innerHTML += "<p class='blue'>Neki tekst</p>";
-//     }
-//     else if(i % 3 == 1)
-//     {
-//         document.body.innerHTML += "<p class='green'>Neki tekst</p>";
-//     }
-//     else
-//     {
-//         document.body.innerHTML += "<p class='red'>Neki tekst</p>";
-//     }
-//     i++;
-// }
+n = 7;
+i = 1
+while(i <= n)
+{
+    if(i % 3 == 0)
+    {
+        document.body.innerHTML += "<p class='blue'>Neki tekst</p>";
+    }
+    else if(i % 3 == 1)
+    {
+        document.body.innerHTML += "<p class='green'>Neki tekst</p>";
+    }
+    else
+    {
+        document.body.innerHTML += "<p class='red'>Neki tekst</p>";
+    }
+    i++;
+}
 
 // Zadatak 5
-// n = 5;
-// i = 1;
-// while(i<=n)
-// {
-//     if(i%2==0)
-//     {
-//         document.write(`<img src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg' style='border:5px solid black;' width='150px;'/>`);
-//     }
-//     else
-//     {
-//         document.write(`<img src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg' style='border:5px dotted black;' width='150px;'/>`);
-//     }
-//     i++;
-// }
+n = 5;
+i = 1;
+while(i<=n)
+{
+    if(i%2==0)
+    {
+        document.write(`<img src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg' style='border:5px solid black;' width='150px;'/>`);
+    }
+    else
+    {
+        document.write(`<img src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg' style='border:5px dotted black;' width='150px;'/>`);
+    }
+    i++;
+}
 
 // Zadatak 6
 i = 1;
@@ -268,9 +269,9 @@ console.log(`Suma kvadrata parnih projeva od ${n} do ${m} jednaka je ${sumaKvadr
 console.log(`Suma kubova neparnih projeva od ${n} do ${m} jednaka je ${sumaKubovaNeparnih}`);
 
 // Zadatak 11
-let k = 227;
+let k = 200;
 i = 1;
-let = brojDelioca = 0;
+let brojDelioca = 0;
 while(i<=k)
 {
     if(k % i == 0)
