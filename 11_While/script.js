@@ -269,7 +269,7 @@ console.log(`Suma kvadrata parnih projeva od ${n} do ${m} jednaka je ${sumaKvadr
 console.log(`Suma kubova neparnih projeva od ${n} do ${m} jednaka je ${sumaKubovaNeparnih}`);
 
 // Zadatak 11
-let k = 200;
+let k = 13;
 i = 1;
 let brojDelioca = 0;
 while(i<=k)

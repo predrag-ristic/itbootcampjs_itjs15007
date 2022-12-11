@@ -9,7 +9,7 @@ if(n * 3 <= v)
 else
 {
     document.write(`<p style="font-family: Arial, Helvetica, sans-serif; font-size: 60px; border: 2px solid black; padding: 40px; margin-left: auto; margin-right: auto; width: 200px; background-color: red; text-align: center; color: white;">NE</p>`);
-    document.write(`<p style="font-family: Arial, Helvetica, sans-serif; font-size: 40px; text-align: center; color: red;">Broj gostiju koji treba da napusti objekat je ${n - (v / 3)}.</p>`);
+    document.write(`<p style="font-family: Arial, Helvetica, sans-serif; font-size: 40px; text-align: center; color: red;">Broj gostiju koji treba da napusti objekat je ${n - v / 3}.</p>`);
 }
 
 
