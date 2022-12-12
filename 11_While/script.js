@@ -170,11 +170,11 @@ while(i<=n)
 {
     if(i%2==0)
     {
-        document.write(`<img src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg' style='border:5px solid black;' width='150px;'/>`);
+        document.write(`<img src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg' style='border:5px solid black;' width='150px;'>`);
     }
     else
     {
-        document.write(`<img src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg' style='border:5px dotted black;' width='150px;'/>`);
+        document.write(`<img src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg' style='border:5px dotted black;' width='150px;'>`);
     }
     i++;
 }
