@@ -151,7 +151,8 @@ while(i <= k)
 console.log(`Broj delioca broja ${k} je: ${brDel}`);
 
 // Zadatak 12
-n = 27;
+// Nacin a
+n = 5;
 i = 1;
 brDel = 0;
 while(i <= n)
@@ -169,4 +170,48 @@ if(brDel == 2)
 else
 {
     console.log(`Broj ${n} je slozen`);
+}
+
+// Nacin b
+n = 5;
+i = 2;
+let prostBroj = true;
+while(i < n)
+{
+    if(n % i == 0)
+    {
+        prostBroj = false;
+        break;
+    }
+    i++;
+}
+if(prostBroj == false)
+{
+    console.log(`Broj ${n} je slozen`);
+}
+else
+{
+    console.log(`Broj ${n} je prost`);
+}
+
+// Nacin c
+n = 4;
+i = 2;
+prostBroj = true;
+while(i < n / 2)
+{
+    if(n % i == 0)
+    {
+        prostBroj = false;
+        break;
+    }
+    i++;
+}
+if(prostBroj == false)
+{
+    console.log(`Broj ${n} je slozen`);
+}
+else
+{
+    console.log(`Broj ${n} je prost`);
 }
