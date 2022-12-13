@@ -98,7 +98,7 @@ console.log(`Suma kvadrata brojeva od ${n} do ${m} je ${sum}`);
 // Zadatak 9
 for(i = 1; i <= 3; i++)
 {
-    document.write(`<img src="images/${i}.jpeg" width="300px" height="200px" style="border:10px solid white">`)
+    document.write(`<img src="images/${i}.jpeg" width="200px" height="120px" style="border:10px solid white">`)
 }
 
 // Dodatni zadatak 1
@@ -221,3 +221,72 @@ console.log(`Suma brojeva od ${n} do ${m} koji nisu deljivi brojem ${a} je ${sum
 
 
 // Zadatak 19
+
+
+// Zadatak 20
+let str = `<table border="1px">`;
+for(i = 1; i <=6; i++)
+{
+    if(i % 2 == 0)
+    {
+        str += 
+        `
+            <tr class="pink">
+                <td>Text</td>
+                <td>Text</td>
+            </tr>
+        `;
+    }
+    else
+    {
+        str += 
+        `
+            <tr>
+                <td>Text</td>
+                <td>Text</td>
+            </tr>
+        `;
+    }
+}
+str += `</table>`
+// document.body.innerHTML += str;
+document.write(str);
+
+
+// Zadatak 21
+let list = `<ul>`;
+for(i = 1; i <= 10; i++)
+{
+    if(i % 3 == 0)
+    {
+        list += 
+        `
+            <ul>
+                <li>Element ${i}</li>
+            </ul>
+        `;
+    }
+    else
+    {
+        list += `<li>Element ${i}</li>`;
+    }
+
+}
+list += `</ul>`;
+document.write(list);
+
+
+/* <ul>
+    <li>Element 1</li>
+    <li>Element 2</li>
+    <li>
+        <ul>
+            <li>Element 3</li>
+        </ul>
+    </li>
+</ul> */
+
+// Zadatak 22
+
+
+// Zadatak 23
