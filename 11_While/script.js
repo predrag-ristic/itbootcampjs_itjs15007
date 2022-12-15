@@ -138,7 +138,7 @@ while(i<=n)
     }
     else
     {
-        document.write(`<p>Ovo je tekst ${i}. paragrafa</p>`);
+        document.write(`<p style='color:green'>Ovo je tekst ${i}. paragrafa</p>`);
     }
     i++;
 }
@@ -150,15 +150,15 @@ while(i <= n)
 {
     if(i % 3 == 0)
     {
-        document.body.innerHTML += "<p class='blue'>Neki tekst</p>";
+        document.body.innerHTML += "<p class='red'>Neki tekst</p>";
     }
     else if(i % 3 == 1)
     {
-        document.body.innerHTML += "<p class='green'>Neki tekst</p>";
+        document.body.innerHTML += "<p class='blue'>Neki tekst</p>";
     }
     else
     {
-        document.body.innerHTML += "<p class='red'>Neki tekst</p>";
+        document.body.innerHTML += "<p class='green'>Neki tekst</p>";
     }
     i++;
 }
@@ -230,7 +230,7 @@ i = n;
 let proizvod = 1;
 while(i <= m)
 {
-    proizvod = proizvod * i;
+    proizvod *= i;
     i++;
 }
 console.log(`Proizvod brojeva od ${i} do ${m} je: ${proizvod}.`);
@@ -290,4 +290,25 @@ if(brojDelioca == 2)
 else
 {
     console.log(`Broj ${k} je slozen.`);
+}
+
+// Odrediti prost broj
+n = 11;
+i = 1;
+let brDel = 0;
+while(i <= n)
+{
+    if(n % i == 0)
+    {
+        brDel++
+    }
+    i++;
+}
+if(brDel == 2)
+{
+    console.log(`Broj je prost.`);
+}
+else
+{
+    console.log(`Broj je slozen.`);
 }

@@ -62,14 +62,44 @@ c = 328;
 if(a > b && a > c)
 {
     console.log(`${a} je najveci broj`);
+    if(b > c)
+    {
+        console.log(`${b} je srednji broj`);
+        console.log(`${c} je najmanji broj`);
+    }
+    else
+    {
+        console.log(`${c} je srednji broj`);
+        console.log(`${b} je najmanji broj`);
+    }
 }
 else if(b > a && b > c)
 {
     console.log(`${b} je najveci broj`);
+    if(a > c)
+    {
+        console.log(`${a} je srednji broj`);
+        console.log(`${c} je najmanji broj`);
+    }
+    else
+    {
+        console.log(`${c} je srednji broj`);
+        console.log(`${a} je najmanji broj`);
+    }
 }
 else
 {
     console.log(`${c} je najveci broj`);
+    if(b > a)
+    {
+        console.log(`${b} je srednji broj`);
+        console.log(`${a} je najmanji broj`);
+    }
+    else
+    {
+        console.log(`${a} je srednji broj`);
+        console.log(`${b} je najmanji broj`);
+    }
 }
 
 // Zadatak 22

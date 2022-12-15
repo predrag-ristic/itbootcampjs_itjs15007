@@ -63,7 +63,6 @@ console.log(`Suma brojeva od 1 do ${n} je ${sum}`);
 // Zadatak 6*
 n = 2;
 m = 7;
-i = n;
 sum = 0;
 for(i = n; i <= m; i++)
 {
@@ -86,7 +85,6 @@ console.log(`Proizvod brojeva od ${n} do ${m} je ${prBr}`);
 // Zadatak 8*
 n = 2;
 m = 7;
-i = n;
 sum = 0;
 for(i = n; i <= m; i++)
 {
@@ -102,9 +100,9 @@ for(i = 1; i <= 3; i++)
 }
 
 // Dodatni zadatak 1
-// Ispisati prvih n parnih brojeva pocevsi od broja 2
-n = 3;
-i = 2;
+// Ispisati prvih n parnih brojeva pocevsi od broja 8
+n = 5;
+i = 8;
 brPar = 0;
 while(brPar < n)
 {
@@ -128,7 +126,7 @@ while(sum < k)
     brBrojeva++;
     i++;
 }
-console.log(`${brBrojeva}. broja/eva ucestvuje u sumiranju dok suma ne predje broj ${k}`);
+console.log(`${brBrojeva} broja/eva ucestvuje u sumiranju dok suma ne predje broj ${k}`);
 
 // Koliko neparnih brojeva ucestvuje u sumiranju dok suma ne predje broj k
 k = 10;
@@ -144,7 +142,7 @@ while(sum < k)
     }
     i++;
 }
-console.log(`${brBrojeva - 1}. neparnih broja/eva ucestvuje u sumiranju dok suma ne predje broj ${k}`);
+console.log(`${brBrojeva - 1} neparna/ih broja/eva ucestvuje u sumiranju dok suma ne predje broj ${k}`);
 
 // Zadatak 10*
 
@@ -176,10 +174,40 @@ let arSr = sum / brBrojeva
 console.log(`Aritmeticka sredina brojeva od ${n} do ${m} je ${arSr}.`);
 
 // Zadatak 13
-
+n = -3;
+m = 9;
+let negBr = 0;
+let pozBr = 0;
+for(i = n; i <= m; i++)
+{
+    if(i < 0)
+    {
+        negBr++;
+    }
+    if(i > 0)
+    {
+        pozBr++;
+    }
+}
+console.log(`Broj negativnih brojeva je ${negBr} a broj pozitivnih brojeva je ${pozBr}`);
 
 // Zadatak 14
-
+n = 3;
+m = 10;
+let d3 = 0;
+let d5 = 0;
+for(i = n; i <= m; i++)
+{
+    if(i % 3 == 0)
+    {
+        d3++;
+    }
+    if(i % 5 == 0)
+    {
+        d5++;
+    }
+}
+console.log(`Broj brojeva deljivih sa 3 je ${d3} a broj deljivih sa 5 je ${d5}`);
 
 // Zadatak 15
 // i % 10 == 4
@@ -215,7 +243,18 @@ console.log(`Suma brojeva od ${n} do ${m} koji nisu deljivi brojem ${a} je ${sum
 
 
 // Zadatak 17
-
+n = 3;
+m = 7;
+a = 3;
+prBr = 1;
+for(i = n; i <= m; i++)
+{
+    if(i % a == 0)
+    {
+        prBr *= i
+    }
+}
+console.log(`Proizvod brojeva od ${n} do ${m} koji su deljivi brojem ${a} je ${prBr}.`);
 
 // Zadatak 18
 

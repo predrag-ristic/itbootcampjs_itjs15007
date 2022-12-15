@@ -85,11 +85,11 @@ if(time < 9)
 }
 else if(time >= 17)
 {
-    console.log("<p>Firma ne radi</p>");
+    document.write("<p>Firma ne radi</p>");
 }
 else
 {
-    console.log("<p>Firma radi</p>");
+    document.write("<p>Firma radi</p>");
 }
 
 // Zadatak 11
@@ -100,15 +100,15 @@ let k2 = 19;
 
 if(k1 < p2)
 {
-    console.log("<p>Ne preklapaju se</p>");
+    document.write("<p>Ne preklapaju se</p>");
 }
 else if(k2 < p1)
 {
-    console.log("<p>Ne preklapaju se</p>");
+    document.write("<p>Ne preklapaju se</p>");
 }
 else
 {
-    console.log("<p>Preklapaju se</p>");
+    document.write("<p>Preklapaju se</p>");
 }
 
 // Zadatak 12
@@ -161,6 +161,17 @@ if(n1 > n2)
 else
 {
     console.log(n2 - n1);
+}
+
+// Zadatak 15
+n = 8;
+if(n <= 0)
+{
+    console.log(`Broj je manji ili jednak nuli i njegov prethodnik je: ${n - 1}`);
+}
+else
+{
+    console.log(`Broj je veci od nule i njegov sledbenik je: ${n + 1}`);
 }
 
 // Zadatak 16
