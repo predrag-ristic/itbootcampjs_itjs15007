@@ -51,6 +51,72 @@ function count(a, b)
 count(6, 2);
 
 
+// Zadatak 3
+function neparan(n)
+{
+    if(n % 2 == 0)
+    {
+        return `Broj ${n} je paran broj.`;
+    }
+    else
+    {
+        return `Broj ${n} je neparan broj.`;
+    }
+}
+
+let tekst = neparan(11);
+console.log(tekst);
+
+// Zadatak 4
+function maks2(br1, br2)
+{
+    if(br1 > br2)
+    {
+        return br1;
+    }
+    else
+    {
+        return br2;
+    }
+}
+
+let m2 = maks2(13, 6)
+console.log(`Veci je broj ${m2}`);
+
+function maks4(a, b, c, d)
+{
+    if(a > b && a > c && a > d)
+    {
+        return a;
+    }
+    else if(b > a && b > c && b > d)
+    {
+        return b;
+    }
+    else if(c > a && c > b && c > d)
+    {
+        return c;
+    }
+    else
+    {
+        return d;
+    }
+}
+let m4 = maks4(1, 22, 1, 14)
+console.log(`Najveci je broj ${m4}`);
+
+// function maks4(br1, br2, br3, br4){
+//     // let veci1 = maks2(br1, br2);
+//     // let veci2 = maks2(br3, br4);
+//     // let najveci = maks2(veci1, veci2);
+//     // return najveci;
+
+//     let najveci = maks2(maks2(br1, br2,), maks2(br3, br4));
+// }
+
+// let naj = maks4(15, 2, 14, 3);
+// console.log(naj);
+
  // Zadatak 5
 function image(img)
 {
@@ -86,3 +152,33 @@ function sentenceFont(font)
  {
      sentenceFontIt(i);
  }
+
+
+ // Zadatak 15
+
+
+ // Zadatak 16
+ // t - vreme od polazne tacke do mosta
+ // p - vreme pre podizanja mosta
+ // n - vreme podizanja i spustanja mosta
+ function time(t, p, n)
+ {
+    if(t <= p)
+    {
+        return `Kreci odmah!`;
+    }
+    else
+    {
+        if(t <= p + n)
+        {
+            return `Kreni za ${p + n - t} sekundi.`;
+        }
+        else
+        {
+            return `Mozes lagano da krenes odmah.`;
+        }
+    }
+ }
+
+let kad_da_krenem = time(10, 12, 7)
+console.log(kad_da_krenem);
