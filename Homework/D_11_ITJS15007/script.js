@@ -12,13 +12,13 @@ function arSr1 (n, m)
             brDel++;
         }
     }
-    return (`<p>Aritmeticka sredina brojeva koji nisu deljivi sa tri u intervalu od ${n} do ${m} je: ${sum / brDel}.</p>`);
+    return (sum / brDel);
 }
-document.write(arSr1(1, 8));
+console.log(arSr1(1, 8));
 
 // Arrow
 let arSr2 = (n, m) => arSr1(n, m);
-document.write(arSr2(2, 9));
+console.log(arSr2(2, 9));
 
 
 // Zadatak 2
