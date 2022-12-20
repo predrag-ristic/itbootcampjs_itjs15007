@@ -34,8 +34,8 @@ console.log(`Cena sa popustom je ${postarina - popust}.`);
 
 
 // Zadatak 3
-let brRuza = 144;
-let brKupaca = 21;
+let brRuza = 1;
+let brKupaca = 5;
 let dokupiti = 0;
 let ost = brRuza % brKupaca;
 
