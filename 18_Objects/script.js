@@ -64,7 +64,7 @@ let dan =
     kisa: false,
     sunce: true,
     oblacno: false,
-    temperatura: [18, 20, 24, 28, 21, 25, 21, 19],
+    temperatura: [18, 20, 24, 28, 26, 25, 21, 19],
 
     // Zadatak 1
     sredTemp: function()
@@ -109,50 +109,102 @@ let dan =
     },
 
     // Zadatak 4
-    brMerIzmedjuPrvPos: function()
+    brMerIzmedjuPrvPos: function(n, m)
     {
+        let medjuVrednost = 0;
         this.temperatura.forEach(t =>
             {
-                
+                if(t > n && t < m)
+                {
+                    medjuVrednost++;
+                }
             })
+        return medjuVrednost;
     },
 
     // Zadatak 5
     iznadProseka: function()
     {
-        let brMax = this.brMaxMer();
-        let br = 0;
-        this.temperatura.forEach(t =>
-            {
-                if(brMax > br)
-                {
-                    true;
-                }
-            })
-        return true;
+        
+        // if(this.brNatpros() > this.temperatura.length / 2)
+        // {
+        //     return true;
+        // }
+        // else
+        // {
+        //     return false;
+        // }
+
+        return this.brNatpros() > this.temperatura.length / 2
     },
 
     // Zadatak 6
     ledenDan: function()
     {
-        let leden;
-        this.temperatura.forEach(t => 
+        // a
+        // for(let i = 0; i < this.temperatura.length; i++)
+        // {
+        //     if(this.temperatura[i] > 0)
+        //     {
+        //         return false;
+        //     }
+        // }
+        // return true;
+
+        // b
+        // let leden = true;
+        // this.temperatura.forEach(t =>
+        //     {
+        //         if(t > 0)
+        //         {
+        //             leden = false;
+        //         }
+        //     })
+        // return leden;
+
+        // c
+        let brLeden = 0;
+        this.temperatura.forEach(t =>
             {
-                if(t < 0)
+                if(t > 0)
                 {
-                    leden = true;
-                }
-                else
-                {
-                    leden = false;
+                    brLeden++;
                 }
             })
-        return leden;
+            if(brLeden == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+    },
+
+    tropskiDan: function()
+    {
+        for(let i = 0; i < this.temperatura.length; i++)
+        {
+            if(this.temperatura[i] > 24)
+            {
+                return true;
+            }
+        }
+        return false;
+    },
+
+    nepovoljan: function()
+    {
+
     }
 };
 console.log(dan.sredTemp());  // Zadatak 1
 console.log(dan.brNatpros());  // Zadatak 2
 // console.log(dan.brMaxMer());  // Zadatak 3
-// console.log(dan.brMerIzmedjuPrvPos());  // Zadatak 4
-// console.log(dan.iznadProseka());  // Zadatak 5
+console.log(dan.brMerIzmedjuPrvPos(19, 26));  // Zadatak 4
+console.log(dan.iznadProseka());  // Zadatak 5
 console.log(dan.ledenDan());  // Zadatak 6
+console.log(dan.tropskiDan()); // Zadatak 7
+// console.log(dan.nepovoljan()); // Zadatak 8
+
+

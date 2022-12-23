@@ -225,3 +225,6 @@ let brojPocinjeA = niz =>
     return br;
 }
 console.log(brojPocinjeA(nekiNiz));
+
+
+// Zadatak 24

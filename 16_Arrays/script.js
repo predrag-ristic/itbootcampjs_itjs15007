@@ -355,3 +355,28 @@ console.log(promZnakNeparElemParInd(elementi));
 
 
 // Zadatak 6
+
+
+
+
+
+
+
+
+
+
+let sto = (d1, d2, d3) =>
+{ // d1 > d2 > d3
+    if(d1 - d2 == d2 - d3)
+    {
+        return d3 - (d1 - d2);
+    }
+    else if(d1 - d2 > d2 - d3)
+    {
+        return d1 - (d2 - d3);
+    }
+    else
+    {
+        return d2 - (d1 -  d2);
+    }
+}
