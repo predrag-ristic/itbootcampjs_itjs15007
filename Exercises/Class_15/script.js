@@ -306,9 +306,13 @@ recenica(16);
 // Testirati zadatak (pozvati funkciju i ispisati vrednost koju ona vraća).
 function praksa(n, a, d)
 {
-    for(i = 1; i <= n; i++)
+    let sum = 0;
+    for(i = 0; i <= n; i++)
     {
-        a += d;
+        if(a < a + d)
+        {
+            a += d;
+        }
     }
     return a;
 }

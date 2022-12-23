@@ -106,31 +106,96 @@ console.log(mnozi(1, 9));
 // Zadatak 11
 // Napraviti funkciju koja vraća aritmetičku sredinu brojeva od n do m.
 // Brojeve n i m proslediti kao parametre funkciji.
-
+let arSred = (n, m) =>
+{
+    let sum = 0;
+    let brBr = 0;
+    for(i = n; i <= m; i++)
+    {
+        sum += i;
+        brBr++
+    }
+    return sum / brBr;
+}
+console.log(arSred(2, 6));
 
 
 // Zadatak 12
 // Napisati funkciju koja vraća aritmetičku sredinu brojeva kojima je poslednja cifra 3 u intervalu od n do m.
 // Brojeve n i m proslediti kao parametre funkciji.
-
+let arSred3 = (n, m) =>
+{
+    let sum = 0;
+    let brDel = 0;
+    for(i = n; i <= m; i++)
+    {
+        if(i % 10 == 3)
+        {
+            sum += i;
+            brDel++;
+        }
+    }
+    return sum / brDel;
+}
+console.log(arSred3(2, 16));
 
 
 // Zadatak 13
 // Napisati funkciju kojoj se prosleđuje ceo broj a ona ispisuje tekst koji ima prosleđenu veličinu fonta.
+let ispisFont = n => document.write(`<p style="font-size:${n}px">Ovo je tekst kome je prosledjena velicina fonta i sada je ${n}</p>`)
 
+ispisFont(24)
 
 
 // Zadatak 14
 // Napisati funkciju koja pet puta ispisuje istu rečenicu, a veličina fonta rečenice treba da bude jednaka vrednosti iteratora. 
-
+let ispisRecenica = n =>
+{
+    let m = n + 5;
+    for(i = n; i < m; i++)
+    {
+        document.write(`<p style="font-size:${i}px">Ovo je tekst kome je prosledjena velicina fonta i sada je ${i}</p>`)
+    }
+}
+ispisRecenica(15);
 
 
 // Zadatak 15
 // Dobili ste plaćenu programersku praksu u trajanju od n meseci. Prvog meseca, plata će biti a dinara, a ako budete vredno radili svakog narednog meseca ćete dobiti povišicu od d dinara. Brojeve n, a i d određujete sami.
 // Napišite funkciju kojoj se prosleđuju brojevi n, a i d. Funkcija treba da vrati vrednost koliko ćete ukupno navca zaraditi, ukoliko svakog meseca budete dobijali povišicu.
 // Testirati zadatak (pozvati funkciju i ispisati vrednost koju ona vraća).
+let plata = (n, a, d) =>
+{
+    let sum = 0;
+    for(i = 1; i <= n; i++)
+    {
+        a += d;
+        console.log(a);
+    }
+    return ;
+}
+console.log(plata(5, 10000, 5000));
 
 
 
 // Zadatak 16
 // Na igrama bez granica, ekipi je postavljen zadatak da za što kraće vreme pređe stazu na kojoj se nalazi pokretni most. Takmičaru ove ekipe od polazne tačke do mosta treba t sekundi. Tačno p sekundi od kada takmičar može da krene sa polazne tačke (tj. od početka merenja) most počinje da se podiže. Od trenutka podizanja pa do spuštanja mosta protiče n sekundi i prelaz preko mosta za to vreme nije moguć. Nakon toga most ostaje spušten. Takmičari za čekanje kod mosta dobijaju negativne poene, pa je tim rešio da napravi program koji će im tačno odrediti u kojoj sekundi treba da pođu sa startne pozicije kako ne bi dobijali negativne poene. Pomozite timu da napravi funkciju na osnovu prosleđenih vrednosti t, p i n. Funkcija vraća koliko sekundi nakon početka merenja vremena treba da pođe, kako bi prošli poligon bez zaustavljanja.
+let igraBezGranica = (t, p, n) =>
+{
+    if(t < p)
+    {
+        document.write(`<p>Moze da krene odmah.</p>`)
+    }
+    else
+    {
+        if(t < p + n)
+        {
+            document.write(`<p>Sekunde koliko takmicar mora da saceka: ${p + n - t}</p>`)
+        }
+        else
+        {
+            document.write(`<p>Moze da krene odmah.</p>`)
+        }
+    }
+}
+igraBezGranica(25, 20, 2);

@@ -64,7 +64,7 @@ let dan =
     kisa: false,
     sunce: true,
     oblacno: false,
-    temperatura: [18, 20, 24, 28, 28, 25, 21, 19],
+    temperatura: [18, 20, 24, 28, 21, 25, 21, 19],
 
     // Zadatak 1
     sredTemp: function()
@@ -95,8 +95,64 @@ let dan =
     // Zadatak 3
     brMaxMer: function()
     {
+        let max = this.temperatura[0];
+        let brMaxMer = 0;
+        this.temperatura.forEach(t =>
+            {
+                if(t >= max)
+                {
+                    max = t;
+                    brMaxMer;
+                }
+            })
+        return brMaxMer;
+    },
 
+    // Zadatak 4
+    brMerIzmedjuPrvPos: function()
+    {
+        this.temperatura.forEach(t =>
+            {
+                
+            })
+    },
+
+    // Zadatak 5
+    iznadProseka: function()
+    {
+        let brMax = this.brMaxMer();
+        let br = 0;
+        this.temperatura.forEach(t =>
+            {
+                if(brMax > br)
+                {
+                    true;
+                }
+            })
+        return true;
+    },
+
+    // Zadatak 6
+    ledenDan: function()
+    {
+        let leden;
+        this.temperatura.forEach(t => 
+            {
+                if(t < 0)
+                {
+                    leden = true;
+                }
+                else
+                {
+                    leden = false;
+                }
+            })
+        return leden;
     }
 };
-console.log(dan.sredTemp());
-console.log(dan.brNatpros());
+console.log(dan.sredTemp());  // Zadatak 1
+console.log(dan.brNatpros());  // Zadatak 2
+// console.log(dan.brMaxMer());  // Zadatak 3
+// console.log(dan.brMerIzmedjuPrvPos());  // Zadatak 4
+// console.log(dan.iznadProseka());  // Zadatak 5
+console.log(dan.ledenDan());  // Zadatak 6
