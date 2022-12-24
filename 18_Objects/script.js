@@ -142,14 +142,14 @@ let dan =
     ledenDan: function()
     {
         // a
-        // for(let i = 0; i < this.temperatura.length; i++)
-        // {
-        //     if(this.temperatura[i] > 0)
-        //     {
-        //         return false;
-        //     }
-        // }
-        // return true;
+        for(let i = 0; i < this.temperatura.length; i++)
+        {
+            if(this.temperatura[i] > 0)
+            {
+                return false;
+            }
+        }
+        return true;
 
         // b
         // let leden = true;
@@ -163,22 +163,22 @@ let dan =
         // return leden;
 
         // c
-        let brLeden = 0;
-        this.temperatura.forEach(t =>
-            {
-                if(t > 0)
-                {
-                    brLeden++;
-                }
-            })
-            if(brLeden == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+        // let brLeden = 0;
+        // this.temperatura.forEach(t =>
+        //     {
+        //         if(t > 0)
+        //         {
+        //             brLeden++;
+        //         }
+        //     })
+        //     if(brLeden == 0)
+        //     {
+        //         return true;
+        //     }
+        //     else
+        //     {
+        //         return false;
+        //     }
     },
 
     tropskiDan: function()
