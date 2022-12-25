@@ -19,17 +19,20 @@ console.log(neparan(6));
 
 // Zadatak 4
 // Napisati funkciju maks2 koja vraća veći od dva prosleđena realna broja. Zatim napisati funkciju maks4 koja vraća najveći od četiri prosleđena realna broja.
-let maks2 = (a, b) => 
-{
-    if(a > b)
-    {
-        return a;
-    }
-    else
-    {
-        return b;
-    }
-}
+// let maks2 = (a, b) => 
+// {
+//     if(a > b)
+//     {
+//         return a;
+//     }
+//     else
+//     {
+//         return b;
+//     }
+// }
+// console.log(maks2(15, 8));
+
+let maks2 = (a, b) => a > b ? a : b; 
 console.log(maks2(15, 8));
 
 let maks4 = (a, b, c, d) => maks2(maks2(maks2(a, b), c), d)

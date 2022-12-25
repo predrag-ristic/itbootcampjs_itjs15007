@@ -4,7 +4,7 @@ let day =
     rain: true,
     sun: true,
     cloudy: false,
-    temp: [25, 35, 24],
+    temp: [23, -5, 26],
 
 
 // Zadatak 1
@@ -43,7 +43,7 @@ let day =
     {
         for(let i = 0; i < this.temp.length; i++)
         {
-            if((day.rain == true && day.temp[i] == -5) || (day.cloudy == true && day.temp[i] >= 25) || (day.rain == true && day.cloudy == true && day.sun == true))
+            if((day.rain == true && day.temp[i] < -5) || (day.cloudy == true && day.temp[i] > 25) || (day.rain == true && day.cloudy == true && day.sun == true))
             {
                 return true;
             }
