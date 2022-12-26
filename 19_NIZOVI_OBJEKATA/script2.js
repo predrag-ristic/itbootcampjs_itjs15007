@@ -82,10 +82,10 @@ let user2 =
     },
 };
 
-// Ispisati sve blogove korisnika user
-console.log(user.blogs);
+console.log(user.blogs); // Ispisati sve blogove korisnika user
 
 console.log(user.blogs[0]); // Ovo je prvi blog
+
 console.log(user.blogs[0].title); // Ispisati naslov prvog bloga koji je napisao korisnik user
 
 user.logBlogs();
@@ -126,7 +126,7 @@ users.forEach(user =>
         }
     });
 
-    // Napraviti arrow funkciju kojoj se prosledjuje username autora, a ona ispisuje sve njegove blogove
+// Napraviti arrow funkciju kojoj se prosledjuje username autora, a ona ispisuje sve njegove blogove
     let printBlogs = username =>
     {
         users.forEach(user =>
@@ -139,3 +139,79 @@ users.forEach(user =>
     }
 
     printBlogs(`Jolene Doe`);
+
+
+// kroz niz users pa onda kroz njihove nizove blogs, blogs je objekat i tu treba da trazim likes. Treba odrediti prosecan broj lajkova pa onda opet kroz usere i njihove blogove.
+
+users.forEach(u =>
+    {
+        let blogs = u.blogs;
+        let sum = 0;
+        blogs.forEach(b =>
+            {
+                sum += b.likes
+            });
+        if(sum > 100)
+        {
+            console.log(user.username);
+        }
+    });
+
+// Ispisati naslove onih blogova koji imaju natprosecan broj pozitivnih ocena
+let avgLikes = users =>
+{
+    let sum = 0; // Ukupna suma lajkova
+    let br = 0; // Ukupan broj blogova
+    for(let i = 0; i < users.length; i++)
+    {
+        let user = users[i]; // Ovo daje objekat user (jedan element iz niza users)
+        let blogs = user.blogs; // Ovo daje niz blogova za `selektovanog` korisnika
+        for(let j = 0; j < blogs.length; j++)
+        {
+            let blog = blogs[j]; // Ovo daje objekat blog (jedan element iz niza blogs)
+            sum += blog.likes; // Dodaje lajkove na sumu
+            br++; // Racuna broj blogova
+        }
+    }
+    return sum / br;
+}
+
+let avgDislikes = users =>
+{
+    let sum = 0; // Ukupna suma lajkova
+    let br = 0; // Ukupan broj blogova
+    for(let i = 0; i < users.length; i++)
+    {
+        let user = users[i]; // Ovo daje objekat user (jedan element iz niza users)
+        let blogs = user.blogs; // Ovo daje niz blogova za `selektovanog` korisnika
+        for(let j = 0; j < blogs.length; j++)
+        {
+            let blog = blogs[j]; // Ovo daje objekat blog (jedan element iz niza blogs)
+            sum += blog.dislikes; // Dodaje lajkove na sumu
+            br++; // Racuna broj blogova
+        }
+    }
+    return sum / br;
+}
+
+let aboveAvgLikes = users =>
+{
+    let avgL = avgLikes(users);
+    let avgDl = avgDislikes(users);
+    for(let i = 0; i < users.length; i++)
+    {
+        let user = users[i];
+        let blogs = user.blogs;
+        for(let j = 0; j < blogs.length; j++)
+        {
+            let blog = blogs[j];
+            if(blog.likes > avgL && blog.dislikes < avgDl)
+            {
+                console.log(blog.title);
+            }
+        }
+    }
+}
+console.log(`Prosecan broj lajkova je ${avgLikes(users)}`)
+console.log(`Prosecan broj dislajkova je ${avgDislikes(users)}`)
+aboveAvgLikes(users);
