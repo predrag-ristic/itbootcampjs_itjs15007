@@ -66,7 +66,7 @@ console.log(`Prosecan broj lajkova je: ${avgLikes(blogs)}`);
 // Napraviti arrow funkciju kojoj se prosledjuje niz objekata, a ona vraca sve naslove za blogove koji imaju vise lajkova nego dislajkova
 let moreLikes = blogLikes =>
 {
-    for(let i = 0; i < blogs.length; i++)
+    for(let i = 0; i < blogLikes.length; i++)
     {
         if(blogLikes[i].likes > blogLikes[i].dislikes)
         {

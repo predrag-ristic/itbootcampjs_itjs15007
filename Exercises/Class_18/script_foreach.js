@@ -1,60 +1,60 @@
 // Nizovi - zadaci iz prezentacije	-  https://docs.google.com/presentation/d/14JcyN6iv7FHE5tzIhlTY_jFWjmgCpGF3/edit#slide=id.p9
 
-let sumElem = arr => 
+let sumElem = array => 
 {
     let sum = 0;
-    for(let i = 0; i < arr.length; i++)
-    {
-        sum += arr[i];
-    }
+    array.forEach(e =>
+        {
+            sum += e;
+        })
     return sum;
 };
-let maxVal = arr =>
+let maxVal = array =>
 {
-    let max = arr[0]
-    for(let i = 0; i < arr.length; i++)
-    {
-        if(arr[i] > max)
+    let max = array[0]
+    array.forEach(e =>
         {
-            max = arr[i];
-        }
-    }
+            if(e > max)
+            {
+                max = e;
+            }
+        })
     return max;
-}
-let minVal = arr =>
+};
+let minVal = array =>
 {
-    let min = arr[0]
-    for(let i = 0; i < arr.length; i++)
-    {
-        if(arr[i] < min)
+    let min = array[0]
+    array.forEach(e =>
         {
-            min = arr[i]
-        }
-    }
+            if(e < min)
+            {
+                min = e;
+            }
+        })
     return min;
 }
-let medValue = arr =>
+let medValue = array =>
 {
-    for(let i = 0; i < arr.length; i++)
-    {
-        return sumElem(arr) / arr.length;
-    }
+    array.forEach(e =>
+        {
+            return sumElem(array) / e.length
+        })
 }
 // Zadatak 7
 // Odrediti indeks maksimalnog elementa celobrojnog niza.
-numbers = [48, 4, -2, 10, 101, 20];
+numbers = [48, 4, -2, 10, 101, 220];
 
-let maxInd = arr =>
+let maxInd = array =>
 {
-    let max = maxVal(arr);
-    let index;
-    for(let i = 0; i < arr.length; i++)
-    {
-        if(max == arr[i])
+    let max = maxVal(array);
+    let index = undefined;
+    array.forEach((e, i) =>
         {
-            index = i;
-        }
-    }
+            if(max == e)
+            {
+                index = i;
+            }
+        });
     return index;
 }
 console.log(maxInd(numbers));
@@ -62,19 +62,19 @@ console.log(maxInd(numbers));
 
 // Zadatak 8
 // Odrediti indeks minimalnog elementa celobrojnog niza.
-numbers = [-48, 4, -2, 10, 101, 20];
+numbers = [-48, 4, -322, 10, 101, 20];
 
-let minInd = arr =>
+let minInd = array =>
 {
-    let min = minVal(arr);
+    let min = minVal(array);
     let index;
-    for(let i = 0; i < arr.length; i++)
-    {
-        if(min == arr[i])
+    array.forEach((e, i) =>
         {
-            index = i;
-        }
-    }
+            if(min == e)
+            {
+                index = i;
+            }
+        })
     return index;
 }
 console.log(minInd(numbers));
@@ -268,7 +268,7 @@ let landscape = array =>
     {
         div +=
         `
-        <img src="${array[i]}" width="200px">
+        <img src="${array[i]}" width="200px" height="130px">
         `
     }
     div += `</div>`
@@ -295,34 +295,82 @@ elLength(string)
 
 // Zadatak 20
 // Odrediti element u nizu stringova sa najvećom dužinom.
-string = [`Kings`, `Lakers`, `Raptors`, `Maverics`, `Heat`]
+string = [`Kings`, `Lakers`, `Raptors`, `Maverics`, `Heat`, `Timberwolves`]
 
 let longestString = array =>
 {
     let maxStr = 0;
-    let index = 0;
     for (let i = 0; i < array.length; i++) 
     {
-        if(array.length > maxStr)
+        if(array[i].length > maxStr)
         {
-            maxStr = array.length;
+            maxStr = array[i].length;
         }
     }
     return maxStr;
 }
 console.log(longestString(string));
 
-
-
 // Zadatak 21
 // Odrediti broj elemenata u nizu stringova čija je dužina veća od prosečne dužine svih stringova u nizu.
+string = [`Kings`, `Lakers`, `Raptors`, `Maverics`, `Heat`, `Timberwolves`]
 
+let avgLength = array =>
+{
+    let length = 0;
+    array.forEach(e =>
+        {
+            length += e.Length;
+        });
+    return length / array.length; 
+};
+
+let noElLongestString = array =>
+{
+    let avg = avgLength(array);
+    let no = 0;
+    array.forEach(e =>
+        {
+            if(e.length > avg)
+            {
+                no++;
+            }
+        });
+    return no;
+};
+console.log(avgLength(string));
+console.log(noElLongestString(string));
 
 
 // Zadatak 22
 // Odrediti broj elemenata u nizu stringova koji sadrže slovo 'a’. 
-
+let sadrzeA = array =>
+{
+    let no = 0;
+    array.forEach(e =>
+        {
+            if(e.includes(`a`) || e.includes(`A`))
+            {
+                no++;
+            }
+        });
+    return no;
+}
+console.log(sadrzeA(string));
 
 
 // Zadatak 23
 // Odrediti broj elemenata u nizu stringova koji počinju na slovo 'a' ili 'A’. 
+let pocinjuA = array =>
+{
+    let no = 0;
+    array.forEach(e =>
+        {
+            if(e[0] == (`a`) || e[0] == (`A`))
+            {
+                no++;
+            }
+        });
+    return no;
+}
+console.log(pocinjuA(string));

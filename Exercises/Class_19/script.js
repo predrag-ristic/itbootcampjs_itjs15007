@@ -1,50 +1,398 @@
-// Formirati objekat dan koji sadrži:
-// Datum (string u formatu YYYY/MM/DD),
-// Kiša (true/false),
-// Sunce (true/false),
-// Oblačno (true/false),
-// Vrednosti temperature (Niz temperatura tog dana).
+let day = 
+{
+    date: `2022/12/26`,
+    rainy: true,
+    sunny: true,
+    cloudy: true,
+    temperature: [5, 10, 15, 15, 15],
+    average: function()
+    {
+        let sum = 0;
+        this.temperature.forEach(e =>
+            {
+                sum += e;
+            })
+        return sum / this.temperature.length;
+    },
+    noAboveAverage: function()
+    {
+        let no = 0;
+        let avg = this.average();
+        this.temperature.forEach(e =>
+            {
+                if(e > avg)
+                {
+                    no++
+                }
+            })
+        return no;
+    },
+    maxTemp: function()
+    {
+        let max = this.temperature[0]
+        this.temperature.forEach(e =>
+            {
+                if(e > max)
+                {
+                    max = e;
+                }
+            });
+        return max;
+    },
+    noMaxTemp: function()
+    {
+        let no = 0;
+        this.temperature.forEach(e =>
+            {
+                let max = this.maxTemp(e);
+                if(max == e)
+                {
+                    no++
+                }
+            });
+        return no;
+    },
+    tempBetweenTwo: function(n, m)
+    {
+        let no = 0;
+        this.temperature.forEach(e =>
+            {
+                if(e > n && e < m)
+                {
+                    no++;
+                }
+            });
+        return no;
+    },
+    aboveAvg: function()
+    {
+        let noAboveAverage = this.noAboveAverage();
+            if(noAboveAverage > this.temperature.length / 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+    },
+    icyDay: function()
+    {
+        // for(let i = 0; i < this.temperature.length; i++)
+        // {
+        //     if(this.temperature[i] > 0)
+        //     {
+        //         return false;
+        //     }
+        // }
+        // return true;
+        let icy = true;
+        this.temperature.forEach(e =>
+            {
+                if(e > 0)
+                {
+                    icy = false;
+                }
+            });
+        return icy;
+    },
+    tropicalDay: function()
+    {
+        for(let i = 0; i < this.temperature.length; i++)
+        {
+            if(this.temperature[i] < 24)
+            {
+                return false;
+            }
+        };
+        return true;
+    },
+    unpleasantDay: function()
+    {
+        for(let i = 1; i < this.temperature.length; i++)
+        {
+            if((this.temperature[i] - this.temperature[i - 1]) > 8 || (this.temperature[i - 1] - this.temperature[i]) > 8)
+            {
+                return true;
+            }
+        }
+        return false;
+    },
+    oddDay: function()
+    {
+        for(let i = 0; i < this.temperature.length; i++)
+        {
+            if((day.rainy == true && this.temperature[i] < -5) || (day.cloudy == true && this.temperature[i] > 25) || (day.cloudy == true && day.rainy == true && day.sunny == true))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+};
+console.log(day.average());
+console.log(day.noAboveAverage());
+console.log(day.maxTemp());
+console.log(day.noMaxTemp());
+console.log(day.tempBetweenTwo(1, 15));
+console.log(day.aboveAvg());
+console.log(day.icyDay());
+console.log(day.tropicalDay());
+console.log(day.unpleasantDay());
+console.log(day.oddDay());
 
-// Napisati metode koje:
 
-// Određuje i vraća prosečnu temperaturu izmerenu tog dana.
+let blog1 = 
+{
+    title: `1. HTML`,
+    likes: 30,
+    dislikes: 35
+};
+let blog2 =
+{
+    title: `2. CSS!`,
+    likes: 25,
+    dislikes: 8
+};
+let blog3 =
+{
+    title: `3. JS`,
+    likes: 40,
+    dislikes: 15
+};
+let blog4 = 
+{
+    title: `4. C!`,
+    likes: 70,
+    dislikes: 85
+};
+let blog5 =
+{
+    title: `5. Python!`,
+    likes: 50,
+    dislikes: 40
+};
+let blog6 =
+{
+    title: `6. Java`,
+    likes: 120,
+    dislikes: 35
+};
+let blogs = [blog1, blog2, blog3, blog4, blog5, blog6];
 
-// Prebrojava i vraća koliko merenja je bilo sa natprosečnom temperaturom.
 
-// Prebrojava i vraća koliko merenja je bilo sa maksimalnom temperaturom.
+let totalLikes = array =>
+{
+    let sum = 0;
+    array.forEach(e =>
+        {
+            sum += e.likes;
+        });
+    return sum;
+};
+console.log(`Total number of likes is ${totalLikes(blogs)}`);
 
-// Prima dva parametra koji predstavljaju dve temperature. Potrebno je da metoda vrati broj merenja u toku dana čija je vrednost između ove dve zadate temperature (ne uključujući te dve vrednosti).
 
-// Vraća true ukoliko je u većini dana temperatura bila iznad proseka. U suprotnom vraća false. 
+let totalDislikes = array =>
+{
+    let sum = 0;
+    array.forEach(e =>
+        {
+            sum += e.dislikes;
+        });
+    return sum;
+};
+console.log(`Total number of dislikes is ${totalDislikes(blogs)}`);
 
-// Za dan se smatra da je leden ukoliko nijedna temperatura izmerena tog dana nije iznosila iznad 0 stepeni. Metod vraća true ukoliko je dan bio leden, u suprotnom metod vraća false.
 
-// Za dan se smatra da je tropski ukoliko nijedna temperatura izmerena tog dana nije iznosila ispod 24 stepena. Metod vraća true ukoliko je dan bio tropski, u suprotnom vraća false.
+let avgLikes = array =>
+{
+    return totalLikes(array) / array.length;
+}
+console.log(`Average number of likes is ${avgLikes(blogs)}`);
 
-// Dan je nepovoljan ako je razlika između neka dva uzastopna merenja veća od 8 stepeni. Metod vraća true ukoliko je dan bio nepovoljan, u suprotnom vraća false.
-
-// Za dan se kaže da je neuobičajen ako je bilo kiše i ispod -5 stepeni, ili bilo oblačno i iznad 25 stepeni, ili je bilo i kišovito i oblačno i sunčano. Metod vraća true ukoliko je dan bio neuobičajen, u suprotnom vraća false.
-
-// Napraviti arrow funkciju kojoj se prosleđuje niz objekata, a ona vraća ukupan broj lajkova
-
-// Napraviti arrow funkciju kojoj se prosleđuje niz objekata, a ona vraća prosečan broj lajkova
 
 // Napraviti arrow funkciju kojoj se prosleđuje niz objekata, a ona ispisuje sve one naslove blogova koji imaju više pozitivnih nego negativnih ocena
+let blogsMoreLikes = array =>
+{
+    for(let i = 0; i < array.length; i++)
+    {
+        if(array[i].likes > array[i].dislikes)
+        {
+            return array[i].title;
+        }
+    };
+    // let titles = undefined;
+    // array.forEach(e =>
+    //     {
+    //         if(e.likes > e.dislikes)
+    //         {
+    //             titles = e.title;
+    //         }
+    //     });
+    // return titles;
+}
+console.log(`Blog with more likes than dislikes is ${blogsMoreLikes(blogs)}`);
+
 
 // Napraviti arrow funkciju kojoj se prosleđuje niz objekata, a ona ispisuje sve one naslove blogova koji imaju najmanje duplo više pozitivnih nego negativnih ocena
+let twiceAsManyLikes = array =>
+{    
+    // for(let i = 0; i < array.length; i++)
+    // {
+    //     if(array[i].likes >= array[i].dislikes * 2)
+    //         {
+    //             return array[i].title;
+    //         }
+    // };
+    let titles = undefined;
+    array.forEach(e =>
+        {
+            if(e.likes >= e.dislikes * 2)
+            {
+                titles = e.title;
+            }
+        });
+    return titles;
+}
+console.log(`Blog with twice as many likes than dislikes is ${twiceAsManyLikes(blogs)}`);
+
 
 // Napisati arrow funkciju kojoj se prosleđuje niz objekata a ona ispisuje sve naslove koji se završavaju uzvičnikom
+let exclamationEnd = array =>
+{
+    // for(let i = 0; i < array.length; i++)
+    // {
+    //     if(array[i].endsWith(`!`))
+    //     {
+    //         return array[i].title;
+    //     }
+    // }
+    array.forEach(e =>
+        {
+            if(e.title.endsWith("!"))
+            {
+                return e.title
+            }
+        });
+}
+console.log(`Blog ending with an exclamation point is ${exclamationEnd(blogs)}`);
 
-// Napraviti niz korisnika gde svaki od korisnika sadrži niz blogova. Svaki blog u ovom nizu je objekat.
 
-// Ispisati imena onih autora koji imaju ispod 18 godina
+let user1 =
+{
+    username: `John Doe`,
+    age: 34,
+    blogs: [blog1, blog2, blog3],
+    logBlogs: function()
+    {
+        this.blogs.forEach(e =>
+            {
+                console.log(e.title);
+            });
+    }
+};
+let user2 =
+{
+    username: `Jane Doe`,
+    age: 30,
+    blogs: [blog2, blog3, blog4],
+    logBlogs: function()
+    {
+        this.blogs.forEach(e =>
+            {
+                console.log(e.title);
+            });
+    }
+};
+let user3 =
+{
+    username: `Jill Doe`,
+    age: 16,
+    blogs: [blog1, blog5, blog6],
+    logBlogs: function()
+    {
+        this.blogs.forEach(e =>
+            {
+                console.log(e.title);
+            });
+    }
+};
 
-// Ispisati naslove onih blogova koji imaju više od 50 lajkova
+let users = [user1, user2, user3]
 
-// Ispisati sve blogove autora čiji je username ’JohnDoe’
+users.forEach(e =>
+    {
+        if(e.age < 18)
+        {
+            console.log(e.username);
+        };
+    });
 
-// Ispisati imena onih autora koji imaju ukupno više od 100 lajkova za blogove koje su napisali
+users.forEach(e =>
+    {
+        let blogs = e.blogs;
+        blogs.forEach(e =>
+            {
+                if(e.likes > 50)
+                {
+                    console.log(e.title);
+                }
+            });
+    });
 
+users.forEach(e =>
+    {
+        if(e.username == `John Doe`)
+        {
+            e.logBlogs();
+        }
+    });
+
+let printBlogs = array =>
+{
+    users.forEach(e =>
+        {
+            if(e.username == array)
+            {
+                e.logBlogs();
+            }
+        })
+}
+printBlogs(`Jill Doe`)
+
+users.forEach(e =>
+    {
+        let blogs = e.blogs;
+        let sum = 0;
+        blogs.forEach(e =>
+            {
+                sum += e.likes;
+            });
+        if(sum > 100)
+        {
+            console.log(e.username);
+        }
+    });
+
+let abvAvg = array =>
+{
+    let avg = avgLikes(array);
+    array.forEach(e =>
+        {
+            e.forEach(e =>
+                {
+                    if(e.likes > avg)
+                    {
+                        console.log(e.title);
+                    }
+                });
+        });
+}
+console.log(avgLikes(blogs));
+console.log(abvAvg(users));
+
+// Napisati metode koje:
 // Ispisati naslove onih blogova koji imaju natprosečan broj pozitivnih ocena
 
 // Ispisati naslove onih blogova koji imaju natprosečan broj pozitivnih ocena i ispodprosečan broj negativnih ocena
@@ -55,6 +403,6 @@
 // Ispisati prvi od njih
 // Ispisati poslednji od njih
 
-//  Napraviti arrow funksiju koja prebrojava i ispisuje koliko je bilo kišnih dana, koliko je bilo sunčanih dana i koliko je bilo oblačnih dana
+// Napraviti arrow funksiju koja prebrojava i ispisuje koliko je bilo kišnih dana, koliko je bilo sunčanih dana i koliko je bilo oblačnih dana
 
 // Napraviti arrow funkciju koja računa i vraća koliko je bilo dana sa natprosečnom temperaturom
