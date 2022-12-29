@@ -91,7 +91,7 @@ let neparan = (br) =>
 console.log(neparan(3));
 console.log(neparan(6));
 
-// kraca varijanta
+// kraca letijanta
 let neparan_1 = (n) =>
 {
     return (n % 2 == 1)
@@ -99,7 +99,7 @@ let neparan_1 = (n) =>
 console.log(neparan_1(19));
 console.log(neparan_1(2));
 
-// jos kraca varijanta - samo koristeci svojstva arrow funkcije - NAJKOMPAKTNIJI
+// jos kraca letijanta - samo koristeci svojstva arrow funkcije - NAJKOMPAKTNIJI
 // 1. Ako arrow funkciji prosledjujemo TACNO JEDAN paramter, onda () nisu obavezne
 // 2. Ako se telo arrow funkcije sastoji SAMO od return naredbe, ona nije obavezna
 let neparan_2 = n => (n % 2 == 1);
@@ -107,7 +107,7 @@ console.log(neparan_2(18));
 console.log(neparan_2(9));
 
 // Zadatak 4
-// Varijanta 1 - arrow funkcije
+// letijanta 1 - arrow funkcije
 let maks2 = (a, b) =>
 {
     if(a > b)
@@ -121,7 +121,7 @@ let maks2 = (a, b) =>
 }
 console.log(maks2(14, 8));
 
-// Varijanta 2 - skraceni zapis
+// letijanta 2 - skraceni zapis
 let maks2_1 = (a, b) => (a > b) ? a : b; // (uslov) ? if true : if false 
 console.log(maks2_1(1, 6));
 
@@ -159,11 +159,11 @@ console.log(`Najveci je broj ${m4}`);
 // let naj = maks4(3, 6, 8, 3)
 // console.log(naj);
 
-// Varijanta 2 - skraceni zapis
+// letijanta 2 - skraceni zapis
 let maks4_1 = (a, b, c, d) => maks2_1(maks2_1(a, b), maks2_1(c, d))
 console.log(maks4_1(-1244, -227, -79, -713));
 
-// Varijanta 3
+// letijanta 3
 let maks4_2 = (a, b, c, d) => maks2_1(maks2_1(maks2_1(a,b),c),d)
 console.log(maks4_2(-1244, -227, -79, -713));
 
