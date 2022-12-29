@@ -60,12 +60,10 @@ for(let i = 0; i < row.length; i++)
 {
     if(i % 2 == 0)
     {
-        row[i].classList.add(`lightblue`);
         row[i].style.backgroundColor = `lightblue`;
     }
     else
     {
-        row[i].classList.add(`lightpink`);
         row[i].style.backgroundColor = `lightpink`;
     };
 };
