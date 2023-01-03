@@ -47,13 +47,13 @@ for(let i = 0; i < knjiga.length; i++)
     let p1 = document.createElement(`p`);
     p1.textContent = knjiga[i].naslov + `—` + knjiga[i].autor;
 
-    table.appendChild(row);
-    row.appendChild(td1);
-    row.appendChild(td2);
-    td1.appendChild(img)
-    td2.appendChild(p1)
+    table.append(row);
+    row.append(td1);
+    row.append(td2);
+    td1.append(img)
+    td2.append(p1)
 }
-document.body.appendChild(table);
+document.body.append(table);
 
 let row = document.getElementsByTagName(`tr`)
 for(let i = 0; i < row.length; i++)
