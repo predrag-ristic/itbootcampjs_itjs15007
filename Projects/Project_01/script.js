@@ -8,8 +8,6 @@ let checkCokolada = document.getElementById(`cokolada`);
 let checkSampanjac = document.getElementById(`sampanjac`);
 
 let radioButton = document.getElementsByName(`placanje`)
-let radioKes = document.getElementById(`kes`);
-let radioKartica = document.getElementById(`kartica`);
 
 let btnIzracunaj = document.getElementById(`izracunaj`);
 let btnReset = document.getElementById(`resetuj`)
@@ -26,6 +24,7 @@ let hCenaKes = document.getElementById(`cenaKes`)
 
 let pCenaKartica = document.getElementById(`parCenaKartica`)
 let hCenaKartica = document.getElementById(`hCenaKartica`)
+
 
 btnIzracunaj.addEventListener(`click`, () =>
 {
@@ -84,8 +83,15 @@ btnIzracunaj.addEventListener(`click`, () =>
                 }
                 else
                 {
-                    pCenaKartica.innerHTML = `Cena bez popusta je: ${totalValue} din.`
-                    hCenaKartica.innerHTML = `Cena za popustom je: ${totalValue - (totalValue * 0.1)} din.`
+                    if(totalValue > 2000)
+                    {
+                        pCenaKartica.innerHTML = `Cena bez popusta je: ${totalValue} din.`
+                        hCenaKartica.innerHTML = `Cena za popustom je: ${totalValue - (totalValue * 0.1)} din.`
+                    }
+                    else
+                    {
+                        hCenaKes.innerHTML = `Cena je: ${totalValue} din.`
+                    }
                 }
             }
         });

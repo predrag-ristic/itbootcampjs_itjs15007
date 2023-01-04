@@ -13,36 +13,43 @@
         <div class="col-4 form">
             <form action="post">
                 <h1>Odaberite cveće:</h1>
-                <div>
-                    <input type="number" name="cvet" id="ruze" placeholder="Cena po cvetu je 150. rsd."><span>Ruže</span>
-                </div>
-                <div>
-                    <input type="number" name="cvet" id="ljiljani" placeholder="Cena po cvetu je 120. rsd."><span>Ljiljani</span>
-                </div>
-                <div>
-                    <input type="number" name="cvet" id="gerberi" placeholder="Cena po cvetu je 70. rsd."><span>Gerberi</span>
+                <div class="input">
+                    <div>
+                        <input type="number" name="cvet" id="ruze" min="0" placeholder="Cena po cvetu je 150 rsd."><span>Ruže</span>
+                    </div>
+                    <div>
+                        <input type="number" name="cvet" id="ljiljani" min="0" placeholder="Cena po cvetu je 120 rsd."><span>Ljiljani</span>
+                    </div>
+                    <div>
+                        <input type="number" name="cvet" id="gerberi" min="0" placeholder="Cena po cvetu je 70 rsd."><span>Gerberi</span>
+                    </div>
                 </div>
         
                 <h1>Dodatni pokloni:</h1>
-                <div>
-                    <input type="checkbox" name="poklon" id="bombonjera" value="bombonjera"><span>Bombonjera</span>
-                </div>
-                <div>
-                    <input type="checkbox" name="poklon" id="cokolada" value="cokolada"><span>Čokolada</span>
-                </div>
-                <div>
-                    <input type="checkbox" name="poklon" id="sampanjac" value="sampanjac"><span>Šampanjac</span>
+                <div class="input">
+                    <div>
+                        <input type="checkbox" name="poklon" id="bombonjera" value="bombonjera"><span>Bombonjera</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="poklon" id="cokolada" value="cokolada"><span>Čokolada</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="poklon" id="sampanjac" value="sampanjac"><span>Šampanjac</span>
+                    </div>
                 </div>
         
                 <h1>Plaćanje:</h1>
-                <div>
-                    <input type="radio" name="placanje" id="kes" value="kes" checked><span>Keš</span>
+                <div class="input">
+                    <div>
+                        <input type="radio" name="placanje" id="kes" value="kes" checked><span>Keš</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="placanje" id="kartica" value="kartica"><span>Kartica</span>
+                    </div>
                 </div>
+
                 <div>
-                    <input type="radio" name="placanje" id="kartica" value="kartica"><span>Kartica</span>
-                </div>
-                <div>
-                    <input type="button" name="izracunaj" id="izracunaj" value="Izračunaj">
+                    <input type="button" name="izracunaj" id="izracunaj" value="Izračunaj" onclick="disabled = true">
                     <input type="reset" name="resetuj" id="resetuj" value="Resetuj">
                 </div>
 
@@ -51,14 +58,20 @@
                 <div id="slikaLjiljan"></div>
                 <div id="slikaGerber"></div>
 
-                <p id="parBombonjera"></p>
-                <p id="parCokolada"></p>
-                <p id="parSampanjac"></p>
+                <div class="total">
+                    <p id="parBombonjera"></p>
+                    <p id="parCokolada"></p>
+                    <p id="parSampanjac"></p>
+                </div>
 
-                <h3 id="cenaKes"></h3>
+                <div class="total">
+                    <h3 id="cenaKes"></h3>
+                </div>
 
-                <p id="parCenaKartica"></p>
-                <h3 id="hCenaKartica"></h3>
+                <div class="total">
+                    <p id="parCenaKartica"></p>
+                    <h3 id="hCenaKartica"></h3>
+                </div>
             </form>
         </div>
         <div class="col-4">&nbsp;</div>
