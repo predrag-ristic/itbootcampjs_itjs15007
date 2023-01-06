@@ -100,6 +100,15 @@ btnIzracunaj.addEventListener(`click`, () =>
                 }
             }
         });
+    
+    let disable = document.getElementsByClassName(`disable`);
+    for(let i = 0; i < disable.length; i++)
+    {
+        if(disable[i].className == `disable`)
+        {
+            disable[i].disabled = true;
+        }
+    };
 });
 
 // Reset
