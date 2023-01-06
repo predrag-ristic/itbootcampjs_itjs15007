@@ -51,7 +51,7 @@ let pitanje9 =
 {
     tekst: `Ko medju navedenima nije bio vojskovodja?`,
     odgovori: [`Hanbal`,`Vergilije`,`Bajazit`,`Atila`],
-    indeksTacan: 2
+    indeksTacan: 1
 }
 let pitanje10 = 
 {
@@ -107,10 +107,11 @@ for(let i = 0; i < 5; i++)
         inpRadio.type = `radio`;
         inpRadio.value = j;
         inpRadio.name = `opcija${i}`;
+        inpRadio.classList.add(`disable`)
         if(inpRadio.value == `0`)
         {
             inpRadio.checked = true
-        }
+        };
 
         // Span koji nosi tekst opcionih odgovora
         divOpcije.append(spanOdg);
@@ -131,33 +132,101 @@ div3.classList.add(`col-4`)
 
 // Dugmad
 formKviz.append(btnOdgovori);
-btnOdgovori.setAttribute(`type`,`button`)
+btnOdgovori.type =`button`
 btnOdgovori.value = `Pošalji odgovore`
+btnOdgovori.classList.add(`disable`)
 formKviz.append(btnReset);
-btnReset.setAttribute(`type`,`reset`)
-btnReset.value = `Nova pitanja`
+btnReset.type = `reset`;
+btnReset.value = `Nova pitanja`;
 
 // Paragrafi koji ispisuju resenja
-for(let i = 0; i < 5; i++)
-{
-    let pResenje = document.createElement(`p`);
-    formKviz.append(pResenje);
-}
+
+let pResenje1 = document.createElement(`p`);
+formKviz.append(pResenje1);
+let pResenje2 = document.createElement(`p`);
+formKviz.append(pResenje2);
+let pResenje3 = document.createElement(`p`);
+formKviz.append(pResenje3);
+let pResenje4 = document.createElement(`p`);
+formKviz.append(pResenje4);
+let pResenje5 = document.createElement(`p`);
+formKviz.append(pResenje5);
 
 
 // Rezultati
 btnOdgovori.addEventListener(`click`, () =>
 {
-    if(pitanja.indeksTacan == 2)
+    let check0 = document.querySelector(`input[name='opcija0']:checked`).value;
+    let check1 = document.querySelector(`input[name='opcija1']:checked`).value;
+    let check2 = document.querySelector(`input[name='opcija2']:checked`).value;
+    let check3 = document.querySelector(`input[name='opcija3']:checked`).value;
+    let check4 = document.querySelector(`input[name='opcija4']:checked`).value;
+
+    if(check0 == pitanja[0].indeksTacan)
     {
-        pResenje.textContent = `Tačno ste odgovorili na ${1}. pitanje`;
+        pResenje1.textContent = `Tačno ste odgovorili na 1. pitanje`;
+        pResenje1.style = `color: green`;
     }
     else
     {
-        pResenje.textContent = `Niste tačno odgovorili na ${1}. pitanje`;
+        pResenje1.textContent = `Niste tačno odgovorili na 1. pitanje`;
+        pResenje1.style = `color: red`;
+    }
+
+    if(check1 == pitanja[1].indeksTacan)
+    {
+        pResenje2.textContent = `Tačno ste odgovorili na 2. pitanje`;
+        pResenje2.style = `color: green`;
+    }
+    else
+    {
+        pResenje2.textContent = `Niste tačno odgovorili na 2. pitanje`;
+        pResenje2.style = `color: red`;
+    }
+
+    if(check2 == pitanja[2].indeksTacan)
+    {
+        pResenje3.textContent = `Tačno ste odgovorili na 3. pitanje`;
+        pResenje3.style = `color: green`;
+    }
+    else
+    {
+        pResenje3.textContent = `Niste tačno odgovorili na 3. pitanje`;
+        pResenje3.style = `color: red`;
+    }
+
+    if(check3 == pitanja[3].indeksTacan)
+    {
+        pResenje4.textContent = `Tačno ste odgovorili na 4. pitanje`;
+        pResenje4.style = `color: green`;
+    }
+    else
+    {
+        pResenje4.textContent = `Niste tačno odgovorili na 4. pitanje`;
+        pResenje4.style = `color: red`;
+    }
+
+    if(check4 == pitanja[4].indeksTacan)
+    {
+        pResenje5.textContent = `Tačno ste odgovorili na 5. pitanje`;
+        pResenje5.style = `color: green`;
+    }
+    else
+    {
+        pResenje5.textContent = `Niste tačno odgovorili na 5. pitanje`;
+        pResenje5.style = `color: red`;
+    }
+
+    let disable = document.getElementsByClassName(`disable`);
+    
+    for(let i = 0; i < disable.length; i++)
+    {
+        if(disable[i].className == `disable`)
+        {
+            disable[i].disabled = true
+        }
     }
 });
-
 
 // Novi niz
 btnReset.addEventListener(`click`, () =>
