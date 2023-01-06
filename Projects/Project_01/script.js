@@ -1,3 +1,4 @@
+// Deklarisanje elemenata
 let inputRuze = document.getElementById(`ruze`);
 let inputLjiljani = document.getElementById(`ljiljani`);
 let inputGerberi = document.getElementById(`gerberi`);
@@ -25,7 +26,7 @@ let hCenaKes = document.getElementById(`cenaKes`)
 let pCenaKartica = document.getElementById(`parCenaKartica`)
 let hCenaKartica = document.getElementById(`hCenaKartica`)
 
-
+// Racun
 btnIzracunaj.addEventListener(`click`, () =>
 {
 // Cvece
@@ -79,24 +80,29 @@ btnIzracunaj.addEventListener(`click`, () =>
             {
                 if(e.value == `kes`)
                 {
-                    hCenaKes.innerHTML = `Cena je: ${totalValue} din.`
+                    hCenaKes.innerHTML = `Cena je: ${totalValue} din.`;
+                    hCenaKes.style = `color: black`;
                 }
                 else
                 {
                     if(totalValue > 2000)
                     {
-                        pCenaKartica.innerHTML = `Cena bez popusta je: ${totalValue} din.`
-                        hCenaKartica.innerHTML = `Cena za popustom je: ${totalValue - (totalValue * 0.1)} din.`
+                        pCenaKartica.innerHTML = `Cena bez popusta je: ${totalValue} din.`;
+                        pCenaKartica.style = `color: darkgrey`;
+                        hCenaKartica.innerHTML = `Cena za popustom je: ${totalValue - (totalValue * 0.1)} din.`;
+                        hCenaKartica.style = `color: black`;
                     }
                     else
                     {
-                        hCenaKes.innerHTML = `Cena je: ${totalValue} din.`
+                        hCenaKes.innerHTML = `Cena je: ${totalValue} din.`;
+                        hCenaKes.style = `color: black`;
                     }
                 }
             }
         });
 });
 
+// Reset
 btnReset.addEventListener(`click`, () =>
 {
     window.location.reload(true)

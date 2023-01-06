@@ -62,6 +62,41 @@ let pitanje10 =
 let pitanja = [pitanje1, pitanje2, pitanje3, pitanje4, pitanje5, pitanje6, pitanje7, pitanje8, pitanje9, pitanje10];
 
 
+// Deklarisanje elemenata
+
+let kviz = document.getElementById(`kviz`)
+// let hPitanje1 = document.getElementById(`pitanje_1`)
+// let hPitanje2 = document.getElementById(`pitanje_2`)
+// let hPitanje3 = document.getElementById(`pitanje_3`)
+// let hPitanje4 = document.getElementById(`pitanje_4`)
+// let hPitanje5 = document.getElementById(`pitanje_5`)
+
+// let spanOdgovor1 = document.getElementsByClassName(`odgovor_1`)
+
+// let radioBtnOdg1 = document.getElementsByName(`odg1`)
+// let radioBtnOdg2 = document.getElementsByName(`odg2`)
+// let radioBtnOdg3 = document.getElementsByName(`odg3`)
+// let radioBtnOdg4 = document.getElementsByName(`odg4`)
+// let radioBtnOdg5 = document.getElementsByName(`odg5`)
+
+// let boxOdgovori1 = document.getElementById(`box_pitanje_1`);
+// let boxOdgovori2 = document.getElementById(`box_pitanje_2`);
+// let boxOdgovori3 = document.getElementById(`box_pitanje_3`);
+// let boxOdgovori4 = document.getElementById(`box_pitanje_4`);
+// let boxOdgovori5 = document.getElementById(`box_pitanje_5`);
+
+// // Dugmad
+// let btnOdgovori = document.getElementById(`posalji`);
+// let btnReset = document.getElementById(`resetuj`);
+
+// // Rezultat
+// let pOdgovor1 = document.getElementsByClassName(`odgovor1`);
+// let pOdgovor2 = document.getElementsByClassName(`odgovor2`);
+// let pOdgovor3 = document.getElementsByClassName(`odgovor3`);
+// let pOdgovor4 = document.getElementsByClassName(`odgovor4`);
+// let pOdgovor5 = document.getElementsByClassName(`odgovor5`);
+
+
 // Randomizacija
 function randomizacija(niz)
 {
@@ -74,75 +109,51 @@ function randomizacija(niz)
 }
 randomizacija(pitanja);
 
-
 // Ispisivanje kviza
-let row = document.createElement('div')
-let div1 = document.createElement(`div`)
-let div2 = document.createElement(`div`)
-let div3 = document.createElement(`div`)
+
+// hPitanje1.innerHTML = pitanja[0].tekst
+// hPitanje2.innerHTML = pitanja[1].tekst
+// hPitanje3.innerHTML = pitanja[2].tekst
+// hPitanje4.innerHTML = pitanja[3].tekst
+// hPitanje5.innerHTML = pitanja[4].tekst
+
+
+// spanOdgovor1.innerHTML = pitanja[1][0]
+
 let formKviz = document.createElement(`form`);
 let btnOdgovori = document.createElement(`input`)
 let btnReset = document.createElement(`input`)
-
 for(let i = 0; i < 5; i++)
 {
     let divBoks = document.createElement(`div`);
+    let divOpcije = document.createElement(`div`);
     let hPitanje = document.createElement(`h3`);
     hPitanje.textContent = `${i + 1}. ` + pitanja[i].tekst
+    let inpRadio = document.createElement(`input`);
+    let spanOdg = document.createElement(`span`);
+    spanOdg.textContent = pitanja[i].odgovori[i];
+    let pResenje = document.createElement(`p`);
     
     formKviz.append(divBoks);
     divBoks.append(hPitanje);
-    divBoks.classList.add(`form`)
-    
-    for(let j = 0; j < pitanja[i].odgovori.length; j++)
+    divBoks.append(divOpcije);
+
+    for(let j = 0; j < 5; j++)
     {
-        // Div koji nosi opcione odgovore
-        let divOpcije = document.createElement(`div`);
-        divBoks.append(divOpcije);
-
-        // Radio dugme
-        let inpRadio = document.createElement(`input`);
-        let spanOdg = document.createElement(`span`);
         divOpcije.append(inpRadio);
-        inpRadio.type = `radio`;
-        inpRadio.value = j;
-        inpRadio.name = `opcija${i}`;
-        if(inpRadio.value == `0`)
-        {
-            inpRadio.checked = true
-        }
-
-        // Span koji nosi tekst opcionih odgovora
         divOpcije.append(spanOdg);
-        spanOdg.textContent = pitanja[i].odgovori[j];
     }
-}
-div2.append(formKviz);
 
-// Risponsiv
-document.body.append(row)
-row.classList.add(`row`)
-row.append(div1);
-div1.classList.add(`col-4`)
-row.append(div2);
-div2.classList.add(`col-4`)
-row.append(div3);
-div3.classList.add(`col-4`)
-
-// Dugmad
-formKviz.append(btnOdgovori);
-btnOdgovori.setAttribute(`type`,`button`)
-btnOdgovori.value = `Pošalji odgovore`
-formKviz.append(btnReset);
-btnReset.setAttribute(`type`,`reset`)
-btnReset.value = `Nova pitanja`
-
-// Paragrafi koji ispisuju resenja
-for(let i = 0; i < 5; i++)
-{
-    let pResenje = document.createElement(`p`);
     formKviz.append(pResenje);
+    
+    
+    
+    
 }
+document.body.append(formKviz);
+formKviz.append(btnOdgovori);
+formKviz.append(btnReset);
+
 
 
 // Rezultati
@@ -157,7 +168,6 @@ btnOdgovori.addEventListener(`click`, () =>
         pResenje.textContent = `Niste tačno odgovorili na ${1}. pitanje`;
     }
 });
-
 
 // Novi niz
 btnReset.addEventListener(`click`, () =>

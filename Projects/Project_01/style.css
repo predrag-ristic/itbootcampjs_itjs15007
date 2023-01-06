@@ -10,14 +10,14 @@
     overflow: hidden;
 }
 
-body {
+/* body {
     background-image: url(images/flowers.jpg);
     background-size: 100%;
-}
+} */
 
 /* For mobile */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
     [class*="col-"] {
         width: 100%;
     }
@@ -25,7 +25,7 @@ body {
 
 /* For tablet */
 
-@media only screen and (min-width: 501px) and (max-width:999px) {
+@media only screen and (min-width: 701px) and (max-width:999px) {
     [class*="col-t-"] {
         float: left;
     }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 02 - Kviz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-4">&nbsp;</div>
+        <div class="col-4" id="kviz"> -->
+            <form action="">
+                <div class="box_pitanje">
+                    <h4 id="pitanje_1"></h4>
+                    <div>
+                        <input type="radio" name="odg1" id="o10" value="0" checked><span class="odgovor_1"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg1" id="o11" value="1"><span class="odgovor_1"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg1" id="o12" value="2"><span class="odgovor_1"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg1" id="o13" value="3"><span class="odgovor_1"></span>
+                    </div>
+                </div>
+    
+                <div class="box_pitanje">
+                    <h4 id="pitanje_2"></h4>
+                    <div>
+                        <input type="radio" name="odg2" id="o20" value="0" checked><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg2" id="o21" value="1"><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg2" id="o22" value="2"><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg2" id="o23" value="3"><span class="odgovor"></span>
+                    </div>
+                </div>
+    
+                <div class="box_pitanje">
+                    <h4 id="pitanje_3"></h4>
+                    <div>
+                        <input type="radio" name="odg3" id="o30" value="0" checked><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg3" id="o31" value="1"><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg3" id="o32" value="2"><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg3" id="o33" value="3"><span class="odgovor"></span>
+                    </div>
+                </div>
+    
+                <div class="box_pitanje">
+                    <h4 id="pitanje_4"></h4>
+                    <div>
+                        <input type="radio" name="odg4" id="o40" value="0" checked><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg4" id="o41" value="1"><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg4" id="o42" value="2"><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg4" id="o43" value="3"><span class="odgovor"></span>
+                    </div>
+                </div>
+    
+                <div class="box_pitanje">
+                    <h4 id="pitanje_5"></h4>
+                    <div>
+                        <input type="radio" name="odg5" id="o50" value="0" checked><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg5" id="o51" value="1"><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg5" id="o52" value="2"><span class="odgovor"></span>
+                    </div>
+                    <div>
+                        <input type="radio" name="odg5" id="o53" value="3"><span class="odgovor"></span>
+                    </div>
+                </div>
+    
+                <div id="dugmad">
+                    <input type="button" name="posalji" id="posalji" value="Pošalji odgovore" onclick="disabled = true">
+                    <input type="reset" name="resetuj" id="resetuj" value="Nova pitanja">
+                </div>
+            </form>
+
+            <p class="odgovor1"></p>
+            <p class="odgovor2"></p>
+            <p class="odgovor3"></p>
+            <p class="odgovor4"></p>
+            <p class="odgovor5"></p>
+        </div>
+        <div class="col-4">&nbsp;</div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
