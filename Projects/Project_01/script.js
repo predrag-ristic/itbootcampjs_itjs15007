@@ -65,11 +65,11 @@ btnIzracunaj.addEventListener(`click`, () =>
     }
     if(checkCokolada.checked)
     {
-        pCokolada.innerHTML = `+ cokolada`
+        pCokolada.innerHTML = `+ čokolada`
     }
     if(checkSampanjac.checked)
     {
-        pSampanjac.innerHTML = `+ sampanjac`
+        pSampanjac.innerHTML = `+ šampanjac`
     }
     
 //Racun
@@ -81,7 +81,6 @@ btnIzracunaj.addEventListener(`click`, () =>
                 if(e.value == `kes`)
                 {
                     hCenaKes.innerHTML = `Cena je: ${totalValue} din.`;
-                    hCenaKes.style = `color: black`;
                 }
                 else
                 {
@@ -89,13 +88,11 @@ btnIzracunaj.addEventListener(`click`, () =>
                     {
                         pCenaKartica.innerHTML = `Cena bez popusta je: ${totalValue} din.`;
                         pCenaKartica.style = `color: darkgrey`;
-                        hCenaKartica.innerHTML = `Cena za popustom je: ${totalValue - (totalValue * 0.1)} din.`;
-                        hCenaKartica.style = `color: black`;
+                        hCenaKartica.innerHTML = `Cena sa popustom je: ${totalValue - (totalValue * 0.1)} din.`;
                     }
                     else
                     {
                         hCenaKes.innerHTML = `Cena je: ${totalValue} din.`;
-                        hCenaKes.style = `color: black`;
                     }
                 }
             }

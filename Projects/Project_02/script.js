@@ -39,7 +39,7 @@ let pitanje7 =
 {
     tekst: `Ko je bio na čelu Drugog srpskog ustanka?`,
     odgovori: [`Karađorđe`,`Miloš Obrenović`,`Stanoje Glavaš`,`Miloš Obilić`],
-    indeksTacan: 3
+    indeksTacan: 1
 }
 let pitanje8 = 
 {
@@ -50,7 +50,7 @@ let pitanje8 =
 let pitanje9 = 
 {
     tekst: `Ko medju navedenima nije bio vojskovodja?`,
-    odgovori: [`Hanbal`,`Vergilije`,`Bajazit`,`Atila`],
+    odgovori: [`Hanibal`,`Vergilije`,`Bajazit`,`Atila`],
     indeksTacan: 1
 }
 let pitanje10 = 
@@ -73,7 +73,7 @@ let pitanje12 =
 }
 let pitanje13 = 
 {
-    tekst: `Simbold besmrtnosti je ptica:`,
+    tekst: `Simbol besmrtnosti je ptica:`,
     odgovori: [`orao`,`sova`,`arheopterike`,`feniks`],
     indeksTacan: 3
 }
@@ -85,7 +85,7 @@ let pitanje14 =
 }
 let pitanje15 = 
 {
-    tekst: `Koji je glavni grad Švajcarske`,
+    tekst: `Koji je glavni grad Švajcarske?`,
     odgovori: [`Ženeva`,`Cirih`,`Bern`,`Bazel`],
     indeksTacan: 2
 }
@@ -97,8 +97,8 @@ let pitanje16 =
 }
 let pitanje17 = 
 {
-    tekst: `Herku Poaro je kreacija:`,
-    odgovori: [`Šerloka Holmsa`,`Agate Kristi`,`Emili Bronte Glavaš`,`Žila Verna`],
+    tekst: `Herkul Poaro je kreacija:`,
+    odgovori: [`Šerloka Holmsa`,`Agate Kristi`,`Emili Bronte`,`Žila Verna`],
     indeksTacan: 1
 }
 let pitanje18 = 
@@ -122,7 +122,7 @@ let pitanje20 =
 let pitanje21 = 
 {
     tekst: `Teoriju relativiteta otkrio je:`,
-    odgovori: [`Isak Njutn`,`Nikola Teska`,`Albert Ajnštajn`,`Tomas Jang`],
+    odgovori: [`Isak Njutn`,`Nikola Tesla`,`Albert Ajnštajn`,`Tomas Jang`],
     indeksTacan: 2
 }
 let pitanje22 = 
@@ -181,7 +181,6 @@ let pitanje30 =
 }
 let pitanja = [pitanje1, pitanje2, pitanje3, pitanje4, pitanje5, pitanje6, pitanje7, pitanje8, pitanje9, pitanje10, pitanje11, pitanje12, pitanje13, pitanje14, pitanje15, pitanje16, pitanje17, pitanje18, pitanje19, pitanje20, pitanje21, pitanje22, pitanje23, pitanje24, pitanje25, pitanje26, pitanje27, pitanje28, pitanje29, pitanje30];
 
-
 // Randomizacija
 function randomizacija(niz)
 {
@@ -193,7 +192,6 @@ function randomizacija(niz)
 
 }
 randomizacija(pitanja);
-
 
 // Ispisivanje kviza
 let row = document.createElement('div');
@@ -242,7 +240,6 @@ for(let i = 0; i < 5; i++)
 }
 div2.append(formKviz);
 
-// Risponsiv
 document.body.append(row);
 row.classList.add(`row`);
 row.append(div1);
@@ -267,7 +264,6 @@ btnReset.type = `reset`;
 btnReset.value = `Nova pitanja`;
 
 // Paragrafi koji ispisuju resenja
-
 let pResenje1 = document.createElement(`p`);
 formKviz.append(pResenje1);
 let pResenje2 = document.createElement(`p`);
@@ -343,7 +339,6 @@ btnOdgovori.addEventListener(`click`, () =>
         pResenje5.textContent = `Niste tačno odgovorili na 5. pitanje`;
         pResenje5.style = `color: red`;
     }
-
 
     // Disaable
     let disable = document.getElementsByClassName(`disable`);
