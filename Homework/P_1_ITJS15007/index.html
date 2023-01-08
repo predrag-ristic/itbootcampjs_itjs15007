@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijekat 01 - Cvećara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row">
+
+        <div class="col-4">&nbsp;</div>
+
+        <div class="col-4 form">
+            <form action="post">
+                <header>
+                    <img src="images/logo.png" alt="logo" class="logo">
+                </header>
+
+                <h1>Odaberite cveće:</h1>
+                <div class="input">
+                    <div>
+                        <input type="number" name="cvet" id="ruze" min="0" placeholder="Cena po cvetu je 150 rsd."><span>Ruže</span>
+                    </div>
+                    <div>
+                        <input type="number" name="cvet" id="ljiljani" min="0" placeholder="Cena po cvetu je 120 rsd."><span>Ljiljani</span>
+                    </div>
+                    <div>
+                        <input type="number" name="cvet" id="gerberi" min="0" placeholder="Cena po cvetu je 70 rsd."><span>Gerberi</span>
+                    </div>
+                </div>
+        
+                <h1>Dodatni pokloni:</h1>
+                <div class="input">
+                    <div>
+                        <input type="checkbox" name="poklon" id="bombonjera" value="bombonjera"><span>Bombonjera</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="poklon" id="cokolada" value="cokolada"><span>Čokolada</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="poklon" id="sampanjac" value="sampanjac"><span>Šampanjac</span>
+                    </div>
+                </div>
+        
+                <h1>Plaćanje:</h1>
+                <div class="input">
+                    <div>
+                        <input type="radio" name="placanje" id="kes" value="kes" checked><span>Keš</span>
+                    </div>
+                    <div>
+                        <input type="radio" name="placanje" id="kartica" value="kartica"><span>Kartica</span>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="button" name="izracunaj" id="izracunaj" value="Izračunaj" class="disable">
+                    <input type="reset" name="resetuj" id="resetuj" value="Resetuj">
+                </div>
+
+                <h1>Vaša porudžbina:</h1>
+                <div id="slikaRuza"></div>
+                <div id="slikaLjiljan"></div>
+                <div id="slikaGerber"></div>
+
+                <div class="total">
+                    <p id="parBombonjera"></p>
+                    <p id="parCokolada"></p>
+                    <p id="parSampanjac"></p>
+                </div>
+
+                <div class="total">
+                    <p id="parCenaKartica"></p>
+                    <h3 id="hCenaKartica"></h3>
+                    <h3 id="cenaKes"></h3>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-4">&nbsp;</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
