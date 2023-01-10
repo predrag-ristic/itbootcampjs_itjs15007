@@ -26,6 +26,14 @@ let hCenaKes = document.getElementById(`cenaKes`)
 let pCenaKartica = document.getElementById(`parCenaKartica`)
 let hCenaKartica = document.getElementById(`hCenaKartica`)
 
+// Input polja
+function onlyNumberKey(e) {
+    let samoBrojevi = (e.which) ? e.which : e.keyCode
+    if (samoBrojevi > 31 && (samoBrojevi < 48 || samoBrojevi > 57))
+        return false;
+    return true;
+}
+
 // Racun
 btnIzracunaj.addEventListener(`click`, () =>
 {
@@ -72,7 +80,7 @@ btnIzracunaj.addEventListener(`click`, () =>
         pSampanjac.textContent = `+ šampanjac`
     }
     
-//Racun
+// Racun
     let totalValue = ruze * 150 + ljiljani * 120 + gerberi * 70 + pokloni
     radioButton.forEach(e =>
         {
