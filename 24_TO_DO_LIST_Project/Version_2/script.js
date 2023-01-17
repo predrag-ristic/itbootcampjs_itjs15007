@@ -17,7 +17,7 @@ button.addEventListener(`click`, () =>
         {
             let li = document.createElement(`li`);
             ul.prepend(li);
-            li.textContent = value;
+            li.textContent += value;
             li.setAttribute(`id`,`lista`)
             input.value = ''
         }
@@ -32,8 +32,11 @@ button.addEventListener(`click`, () =>
     }
 });
 
-ul.addEventListener('click', () =>
+ul.addEventListener('click', e =>
 {
-    let li = document.getElementById(`lista`)
-    ul.removeChild(li)
+    if(e.target.tagName == 'LI')
+    {
+        console.log(`Kliknuto na LI`);
+        e.target.classList.toggle("precrtaj");
+    }
 })
