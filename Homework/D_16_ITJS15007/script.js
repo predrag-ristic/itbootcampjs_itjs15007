@@ -1,28 +1,6 @@
 let input = document.getElementById(`obaveza`);
 let ul = document.querySelector(`ul`);
-let radio = document.getElementById(`radio`)
-
-// input.addEventListener(`keyup`, e =>
-// {
-//     if(e.key == 'Enter')
-//     {
-//         let value = input.value;
-//         if(value != '')
-//         {
-//             let li = document.createElement(`li`);
-//             li.textContent = value;
-//             input.value = ''
-//             if(radio.checked)
-//             {
-//                 ul.prepend(li);
-//             }
-//             else
-//             {
-//                 ul.appendChild(li);
-//             };
-//         };
-//     };
-// });
+let radio = document.getElementById(`prepend`);
 
 
 input.addEventListener("keyup", e =>
@@ -34,13 +12,22 @@ input.addEventListener("keyup", e =>
         if(value != '')
         {
             let toDoList = getTodos();
-            toDoList.push(value);
+            if(radio.checked)
+            {
+                toDoList.unshift(value);
+            }
+            else
+            {
+                toDoList.push(value);
+            }
             localStorage.setItem("todos", JSON.stringify(toDoList));
-            input.value = "";
+            input.value = '';
             displayTodos();
-        }
-    }
+        };
+    };
 });
+console.log(radio.checked);
+
 
 function getTodos()
 {
@@ -52,8 +39,9 @@ function getTodos()
     else
     {
         return JSON.parse(toDoList);
-    }
-}
+    };
+};
+
 
 function displayTodos()
 {
@@ -64,16 +52,16 @@ function displayTodos()
         write += "<li>" + toDoList[i] + "</li>";
     }
     ul.innerHTML = write;
-}
+};
 displayTodos();
 
 
-ul.addEventListener('click', e =>
+ul.addEventListener("click", e =>
 {
     if(e.target.tagName == 'LI')
     {
         e.target.remove()
-        let toDoList = JSON.parse(localStorage.getItem('todos'));
+        let toDoList = getTodos();
         for(let i = 0; toDoList.length; i++)
         {
             let index = toDoList.indexOf(e.target.innerHTML)
