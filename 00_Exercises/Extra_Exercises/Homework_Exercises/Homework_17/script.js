@@ -8,7 +8,6 @@ let getResponse = resource => {
             if (request.readyState == 4 && request.status == 200) {
                 let data = JSON.parse(request.responseText);
                 resolved(data)
-                console.log(avgHeight(data));
             }
             else if (request.readyState == 4) {
                 rejected("Error")
@@ -39,15 +38,7 @@ getResponse("http://localhost:3000/athletes")
         console.log(err);
     });
 
-// let avgHeight = arr =>
-// {
-//     let sum = 0;
-//     arr.forEach(a =>
-//         {
-//             sum += a.height;
-//         })
-//     console.log(`Average height for Top 20 NBA players is ${sum / athletes.length}cm.`);
-// };
+
 
 // Player with the least number of transfers
 getResponse("http://localhost:3000/athletes")
