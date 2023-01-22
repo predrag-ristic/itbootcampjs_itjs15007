@@ -1,0 +1,168 @@
+{
+    "athletes": [
+        {
+            "name": "Dirk Nowitzki",
+            "height": 213,
+            "teams": [
+                "Milwaukee Bucks",
+                "Dallas Mavericks"
+            ]
+        },
+        {
+            "name": "Kevin Garnett",
+            "height": 211,
+            "teams": [
+                "Minnesota Timberwolves",
+                "Boston Celtics",
+                "Brooklyn Nets"
+            ]
+        },
+        {
+            "name": "Jerry West",
+            "height": 191,
+            "teams": [
+                "Los Angeles Lakers"
+            ]
+        },
+        {
+            "name": "Julius Erving",
+            "height": 201,
+            "teams": [
+                "Virginia Squires",
+                "New York Nets",
+                "Philadelphia 76ers"
+            ]
+        },
+        {
+            "name": "Karl Malone",
+            "height": 206,
+            "teams": [
+                "Utah Jazz",
+                "Los Angeles Lakers"
+            ]
+        },
+        {
+            "name": "Moses Malone",
+            "height": 208,
+            "teams": [
+                "Huston Rockets",
+                "Philadelphia 76ers",
+                "Atlanta Hawks",
+                "Milwakee Bucks",
+                "Philadelphia 76ers",
+                "San Antonio Spurs"
+            ]
+        },
+        {
+            "name": "Kevin Durant",
+            "height": 208,
+            "teams": [
+                "Golden State Warriors",
+                "Brooklyn Nets"
+            ]
+        },
+        {
+            "name": "Stephen Curry",
+            "height": 188,
+            "teams": [
+                "Golden State Warriors"
+            ]
+        },
+        {
+            "name": "Oscar Robertson",
+            "height": 196,
+            "teams": [
+                "Cincinnati Royals",
+                "Milwakee Bucks"
+            ]
+        },
+        {
+            "name": "Hakeem Olajuwon",
+            "height": 213,
+            "teams": [
+                "Huston Rockets",
+                "Toronto Raptors"
+            ]
+        },
+        {
+            "name": "Bill Russell",
+            "height": 208,
+            "teams": [
+                "Boston Celtics"
+            ]
+        },
+        {
+            "name": "Kobe Bryant",
+            "height": 198,
+            "teams": [
+                "Los Angeles Lakers"
+            ]
+        },
+        {
+            "name": "Shaquille O`Neal",
+            "height": 216,
+            "teams": [
+                "Orlando Magic",
+                "Los Angeles Lakers",
+                "Miami Heat",
+                "Phoenix Suns",
+                "Cleveland Cavaliers",
+                "Boston Celtics"
+            ]
+        },
+        {
+            "name": "Tim Duncan",
+            "height": 211,
+            "teams": [
+                "San Antonio Spurs"
+            ]
+        },
+        {
+            "name": "Larry Bird",
+            "height": 206,
+            "teams": [
+                "Boston Celtics"
+            ]
+        },
+        {
+            "name": "Magic Johnson",
+            "height": 206,
+            "teams": [
+                "Los Angeles Lakers"
+            ]
+        },
+        {
+            "name": "Wilt Chamberlain",
+            "height": 216,
+            "teams": [
+                "Philadelphia 76ers",
+                "Los Angeles Lakers"
+            ]
+        },
+        {
+            "name": "Kareem Abdul-Jabbar",
+            "height": 218,
+            "teams": [
+                "Milwakee Bucks",
+                "Los Angeles Lakers"
+            ]
+        },
+        {
+            "name": "Michael Jordan",
+            "height": 198,
+            "teams": [
+                "Chicago Bulls",
+                "Washington Wizards"
+            ]
+        },
+        {
+            "name": "Lebron James",
+            "height": 206,
+            "teams": [
+                "Cleveland Cavaliers",
+                "Miami Heat",
+                "Los Angeles Lakers"
+            ]
+        }
+    ]
+}

@@ -1,3 +1,9 @@
+// Kreirati klasu Boja koja ima talasnu dužinu u nm, zasićenje i intenzitet.
+// Napraviti konstruktor kome se prosleđuju tri vrednosti koje treba postaviti.
+// Napraviti odgovarajuće getere i setere.
+// Napraviti funkciju ispitajSličnost koja za dve prosleđene boje vraća true ukoliko su te dve boje iste, u suprotnom vraća false.
+// Napraviti funkciju srednjaTalasnaDuzina koja za niz boja vraća vrednost srednje talasne dužine.
+
 import { Boja } from "./boja.js";
 
 let b1 = new Boja (380, 680, 2.95);
