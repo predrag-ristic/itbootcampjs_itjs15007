@@ -105,26 +105,6 @@ db.collection("users")
         console.error("Error adding task: ", err);
     })
 
-// Movies collection
-db.collection("movies")
-    .doc("ACO")
-    .set({
-        name: "A Clockwork Orange",
-        director: {
-            name: "Stanley",
-            surname: "Kubrick"
-        },
-        release_year: 1971,
-        ganres: ["Science Fiction", "Drama", "Crime", "Mystery"],
-        rating: 88
-    }, { merge: true })
-    .then(function () {
-        console.log("Movie successfully added!");
-    })
-    .catch(function (err) {
-        console.error("Error adding movie: ", err);
-    })
-
 // Update metoda
 db.collection("users")
     .doc("mradojkovic")
