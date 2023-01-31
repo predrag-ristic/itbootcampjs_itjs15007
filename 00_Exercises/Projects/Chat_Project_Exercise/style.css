@@ -1,0 +1,41 @@
+#chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#messages {
+    overflow-y: scroll;
+    flex-grow: 1;
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#form {
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+#input {
+    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: lightblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

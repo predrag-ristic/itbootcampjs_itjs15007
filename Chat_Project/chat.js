@@ -41,19 +41,19 @@ class Chatroom {
         return response;
     };
 
-    getChats(callback) {
-        this.chats
-        .onSnapshot((snapshot) => {
-            let changes = snapshot.docChanges()
-        })
-    };
+    // getChats(callback) {
+    //     this.chats
+    //     .onSnapshot((snapshot) => {
+    //         let changes = snapshot.docChanges()
+    //     })
+    // };
 };
 
-let chat2 = new Chatroom("#js", "");
-chat2.addChat("Veceras imamo gostovanje")
-    .then(() => {
-        console.log("Message successfully added");
-    })
-    .catch((e) => {
-        console.error("Error " + e);
-    });
+// let chat2 = new Chatroom("#js", "");
+// chat2.addChat("Veceras imamo gostovanje")
+//     .then(() => {
+//         console.log("Message successfully added");
+//     })
+//     .catch((e) => {
+//         console.error("Error " + e);
+//     });

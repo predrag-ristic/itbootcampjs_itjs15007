@@ -16,6 +16,16 @@
     [class*="col-"] {
         width: 100%;
     }
+
+    .title {
+        display: block;
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    aside {
+        display: none;
+    }
 }
 
 /* For tablet */
@@ -23,6 +33,16 @@
 @media only screen and (min-width: 501px) and (max-width:999px) {
     [class*="col-t-"] {
         float: left;
+    }
+
+    .title {
+        display: block;
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    aside {
+        display: none;
     }
 
     .col-t-1 {
@@ -81,6 +101,10 @@
         float: left;
     }
 
+    .title {
+        font-size: 1.6vw;
+    }
+
     .col-1 {
         width: 8.33%;
     }
@@ -130,11 +154,16 @@
     }
 }
 
-/* Element colors */
-
-h1, h2 {
+/* Header */
+h1 {
     text-align: center;
-    padding: 20px 0;
+    padding: 1.04vw 0;
+}
+
+h3 {
+    text-align: center;
+    padding: 1.04vw 0;
+    color: grey;
 }
 
 #it {
@@ -143,10 +172,16 @@ h1, h2 {
     color: white;
     width: 55px;
     height: 50px;
-    margin-right: 5px;
+    margin: 0 5px;
     padding: 5px;
 }
 
+.title {
+    margin: 0 10px;
+    color: grey;
+}
+
+/* Navigation */
 nav button {
     height: 40px;
     width: 25%;
@@ -164,14 +199,23 @@ nav button:hover {
     border: 1px solid white;
 }
 
+/* Chat */
 section {
     margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #ededed;
-    border-radius: 10px;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
+#chat {
+    background-color: #ededed;
+    border-radius: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: scroll;
+    height: 580px;
+}
+
+/* Input */
 div input {
     margin: 10px 0;
 }
