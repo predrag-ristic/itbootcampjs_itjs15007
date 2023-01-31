@@ -1,4 +1,4 @@
-class Chatroom {
+export class Chatroom {
     constructor(room, username) {
         this.room = room;
         this.username = username;
@@ -6,12 +6,7 @@ class Chatroom {
     };
 
     set room(r) {
-        if (r.length > 0) {
-            this._room = r;
-        }
-        else {
-            this._room = `N/A`;
-        };
+        this._room = r;
     };
     set username(u) {
         if (u.length >= 2 && u.length <= 10 && !u.match(/\s/)) {
@@ -41,19 +36,14 @@ class Chatroom {
         return response;
     };
 
-    // getChats(callback) {
-    //     this.chats
-    //     .onSnapshot((snapshot) => {
-    //         let changes = snapshot.docChanges()
-    //     })
-    // };
+    getChats(callback) {
+        this.chats
+            .onSnapshot(snapshot => {
+                snapshot.docChanges().forEach(change => {
+                    if (change.type == "added") {
+                        callback(change.doc.data())
+                    }
+                });
+            });
+    };
 };
-
-// let chat2 = new Chatroom("#js", "");
-// chat2.addChat("Veceras imamo gostovanje")
-//     .then(() => {
-//         console.log("Message successfully added");
-//     })
-//     .catch((e) => {
-//         console.error("Error " + e);
-//     });
