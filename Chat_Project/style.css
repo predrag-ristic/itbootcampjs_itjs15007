@@ -8,6 +8,7 @@
 .row {
     width: 100%;
     overflow: hidden;
+    padding: 0 10px;
 }
 
 /* For mobile */
@@ -15,12 +16,6 @@
 @media only screen and (max-width: 500px) {
     [class*="col-"] {
         width: 100%;
-    }
-
-    .title {
-        display: block;
-        font-size: 24px;
-        padding: 10px 0;
     }
 
     aside {
@@ -33,12 +28,6 @@
 @media only screen and (min-width: 501px) and (max-width:999px) {
     [class*="col-t-"] {
         float: left;
-    }
-
-    .title {
-        display: block;
-        font-size: 24px;
-        padding: 10px 0;
     }
 
     aside {
@@ -101,10 +90,6 @@
         float: left;
     }
 
-    .title {
-        font-size: 1.6vw;
-    }
-
     .col-1 {
         width: 8.33%;
     }
@@ -155,14 +140,18 @@
 }
 
 /* Header */
+.header {
+    background-color: white;
+}
+
 h1 {
     text-align: center;
-    padding: 1.04vw 0;
+    padding: 5px;
 }
 
 h3 {
     text-align: center;
-    padding: 1.04vw 0;
+    padding: 5px;
     color: grey;
 }
 
@@ -182,9 +171,14 @@ h3 {
 }
 
 /* Navigation */
+.nav {
+    background-color: white;
+}
+
 nav button {
     height: 40px;
-    width: 25%;
+    width: 24%;
+    margin: 0.5%;
     background-color: #ededed;
     border: 1px solid #ff9703;
     border-radius: 5px;
@@ -200,47 +194,52 @@ nav button:hover {
 }
 
 /* Chat */
-section {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
+/* section {
+    position: absolute;
+    bottom: 100px;
+    left: 33.3%;
+    right: 33.3%;
+    z-index: -1;
+} */
 
 #chat {
+    margin-top: 10px;
     background-color: #ededed;
     border-radius: 10px;
     padding: 10px;
-    overflow-y: scroll;
-    height: 580px;
+    overflow-y: auto;
+    height: 67vh;
+}
+
+#chat::-webkit-scrollbar {
+    display: none;
 }
 
 li {
     margin: 10px;
+    width: fit-content;
     list-style-type: none;
     background-color: #ffc26d;
-    border-radius: 0 10px 10px;
+    border-radius: 0 10px 10px 10px;
     padding-left: 10px;
+}
+
+p {
+    padding: 0 20px 0 0;
 }
 
 span {
     display: inline-block;
     padding: 10px 0;
-}
-
-li :nth-child(1) {
     font-weight: bold;
 }
 
-p {
-    padding-bottom: 10px;
+p:nth-child(2) {
+    padding: 5px 0;
     color: grey;
 }
 
 /* Input */
-div input {
-    margin: 10px 0;
-}
-
 .footer {
     position: fixed;
     bottom: 0;
@@ -248,11 +247,11 @@ div input {
 
 footer div input {
     float: left;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px 0;
 }
 
-#send, #update {
+#send,
+#update {
     width: 70%;
     height: 30px;
     border: 1px solid #ff9703;
@@ -260,8 +259,10 @@ footer div input {
     text-indent: 5px;
 }
 
-#sendBth, #updateBtn {
-    width: 30%;
+#sendBtn,
+#updateBtn {
+    width: 29%;
+    margin-left: 1%;
     height: 30px;
     background-color: #ff9703;
     color: white;
@@ -269,7 +270,8 @@ footer div input {
     border-radius: 5px;
 }
 
-#sendBth:hover, #updateBtn:hover {
+#sendBtn:hover,
+#updateBtn:hover {
     background-color: #ededed;
     color: black;
     cursor: pointer;

@@ -10,27 +10,26 @@
 </head>
 
 <body>
-    <div class="row">
+    <div class="row header">
         <aside class="col-3">&nbsp;</aside>
         <header class="col-6">
             <h1>
-                <span class="title">Welcome to the</span>
                 <span id="it">IT</span>
                 <span>Bootcamp</span>
                 <span class="title">Chatroom</span>
             </h1>
-            <h3>Choose a channel you want to post in</h3>
+            <h3>Choose a channel</h3>
         </header>
         <aside class="col-3">&nbsp;</aside>
     </div>
 
-    <div class="row">
+    <div class="row nav">
         <aside class="col-3">&nbsp;</aside>
         <nav class="col-6">
-            <button>#general</button>
-            <button>#js</button>
-            <button>#homework</button>
-            <button>#tests</button>
+            <button id="general">#general</button>
+            <button id="js">#js</button>
+            <button id="homework">#homework</button>
+            <button id="tests">#tests</button>
         </nav>
         <aside class="col-3">&nbsp;</aside>
     </div>
@@ -40,9 +39,9 @@
         <section class="col-4">
             <div id="chat">
                 <ul>
-                    
+                    <!-- This is where chat messages will appear -->
                 </ul>
-            </duv>
+                </duv>
         </section>
         <aside class="col-4">&nbsp;</aside>
     </div>
@@ -51,12 +50,12 @@
         <aside class="col-4">&nbsp;</aside>
         <footer class="col-4">
             <div>
-                <input type="text" name="send" id="send" placeholder="Your message...">
-                <input type="submit" id="sendBth" value="Send">
+                <input type="text" id="send" placeholder="Your message...">
+                <input type="submit" id="sendBtn" value="Send">
             </div>
 
             <div>
-                <input type="text" name="update" id="update" placeholder="Update username">
+                <input type="text" id="update" placeholder="Update username">
                 <input type="button" id="updateBtn" value="Update">
             </div>
         </footer>

@@ -38,12 +38,13 @@ export class Chatroom {
 
     getChats(callback) {
         this.chats
+            .orderBy('created_at', "asc")
             .onSnapshot(snapshot => {
                 snapshot.docChanges().forEach(change => {
                     if (change.type == "added") {
-                        callback(change.doc.data())
+                        callback(change.doc.data());
                     }
                 });
-            });
+            })
     };
 };
