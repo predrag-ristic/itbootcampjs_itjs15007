@@ -3,6 +3,7 @@ export class Chatroom {
         this.room = room;
         this.username = username;
         this.chats = db.collection("chats");
+        this.unsub;
     };
 
     set room(r) {
@@ -24,6 +25,13 @@ export class Chatroom {
         return this._username
     };
 
+    updateRoom(ur) {
+        this.room = ur;
+        if (this.unsub) {
+            this.unsub();
+        };
+    };
+
     async addChat(message) {
         let date = new Date();
         let addChat = {
@@ -37,14 +45,15 @@ export class Chatroom {
     };
 
     getChats(callback) {
-        this.chats
+        this.unsub = this.chats
             .orderBy('created_at', "asc")
+            .where('room', '==', this.room)
             .onSnapshot(snapshot => {
                 snapshot.docChanges().forEach(change => {
                     if (change.type == "added") {
                         callback(change.doc.data());
                     }
                 });
-            })
+            });
     };
 };

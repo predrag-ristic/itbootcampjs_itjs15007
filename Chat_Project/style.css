@@ -171,11 +171,11 @@ h3 {
 }
 
 /* Navigation */
-.nav {
+.navigation {
     background-color: white;
 }
 
-nav button {
+button {
     height: 40px;
     width: 24%;
     margin: 0.5%;
@@ -185,7 +185,7 @@ nav button {
     float: left;
 }
 
-nav button:hover {
+button:hover {
     background-color: white;
     color: white;
     background-color: #ff9703;
@@ -194,21 +194,13 @@ nav button:hover {
 }
 
 /* Chat */
-/* section {
-    position: absolute;
-    bottom: 100px;
-    left: 33.3%;
-    right: 33.3%;
-    z-index: -1;
-} */
-
 #chat {
     margin-top: 10px;
     background-color: #ededed;
     border-radius: 10px;
     padding: 10px;
     overflow-y: auto;
-    height: 67vh;
+    height: 70vh;
 }
 
 #chat::-webkit-scrollbar {
@@ -219,7 +211,7 @@ li {
     margin: 10px;
     width: fit-content;
     list-style-type: none;
-    background-color: #ffc26d;
+    background-color: #f9daaf;
     border-radius: 0 10px 10px 10px;
     padding-left: 10px;
 }
@@ -240,9 +232,19 @@ p:nth-child(2) {
 }
 
 /* Input */
-.footer {
-    position: fixed;
-    bottom: 0;
+#userUpdated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#userUpdatedP {
+    position: absolute;
+    padding: 5px 10px;
+    border: 1px solid #ff9703;
+    border-radius: 15px;
+    background-color: #ededed;
+    opacity: 80%;
 }
 
 footer div input {

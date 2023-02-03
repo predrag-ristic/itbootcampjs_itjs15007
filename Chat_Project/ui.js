@@ -1,19 +1,19 @@
 export class ChatUI {
     constructor(list) {
         this.list = list;
-    }
+    };
 
     set list(l) {
         this._list = l;
-    }
+    };
     get list() {
         return this._list;
-    }
+    };
 
     templateLi(data) {
         let listHTML =
             `
-        <li>
+            <li>
             <p><span>${data.username}  :</span> ${data.message}</p>
             <p>${this.formatDate(data)}</p>
         </li>
