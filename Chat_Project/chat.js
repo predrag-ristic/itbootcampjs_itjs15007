@@ -48,6 +48,10 @@ export class Chatroom {
         let response = await this.chats.add(addChat);
         return response;
     };
+    async removeChat(id) {
+        let response = await this.chats.doc(id).delete();
+        return response;
+    }
 
     // Pulling chats from DB
     getChats(callback) {

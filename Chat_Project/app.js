@@ -159,6 +159,18 @@ if (localColor) {
 ul.addEventListener("click", e => {
     e.preventDefault();
     if (e.target.tagName == 'IMG') {
+        if (confirm('Are you sure you want to delete the message?') == true) {
+            let li = e.target.parentElement;
+            li.remove();
 
+            let id = li.id;
+            let userList = li.classList;
+
+            if (userList.contains(username)) {
+                chatroom.removeChat(id)
+                    .then(() => console.log('Chat deleted'))
+                    .catch(err => console.log('Error: ' + err))
+            }
+        }
     }
 })
