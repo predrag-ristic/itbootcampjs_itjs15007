@@ -55,7 +55,7 @@ export class ChatUI {
         let currentDay = new Date();
         let appDay = new Date(date);
         let time = "";
-        if (currentDay.getDay() === appDay.getDay()) {
+        if ((currentDay.getDate() + currentDay.getMonth() + currentDay.getFullYear()) === (appDay.getDate() + appDay.getMonth() + appDay.getFullYear())) {
             time = `${h}:${min}`
         }
         else {
