@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.redBtn {
+  font-weight: bold;
+  background-color: #ff8080;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  width: 150px;
+}
+
+.blueBtn {
+  font-weight: bold;
+  background-color: #a3a3ff;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  width: 150px;
+}
+
+.greenBtn {
+  font-weight: bold;
+  background-color: #caffca;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  width: 150px;
+}
