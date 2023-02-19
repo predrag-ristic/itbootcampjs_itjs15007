@@ -11,15 +11,6 @@ class UpdateComponent extends Component {
         }
     }
 
-    componentDidUpdate() {
-        console.log(`
-            Name: ${this.state.name}
-            Last Name: ${this.state.lastname}
-            Email: ${this.state.email}
-            Password: ${this.state.password}
-        `);
-    }
-
     handleChange = event => {
         const name = event.target.name;
         const value = event.target.value;
@@ -34,6 +25,15 @@ class UpdateComponent extends Component {
         const value = event.target.value;
 
         this.setState({ [name]: value });
+    }
+
+    componentDidUpdate() {
+        console.log(`
+            Name: ${this.state.name}
+            Last Name: ${this.state.lastname}
+            Email: ${this.state.email}
+            Password: ${this.state.password}
+        `);
     }
 
     render() {
