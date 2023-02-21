@@ -1,12 +1,16 @@
 import React, { Component } from "react";
-import ChildComponent from "./components/ChildComponent";
 import "./App.css";
+// import ChildComponent from "./components/ChildComponent";
+import ShouldComponentUpdate from "./components/ShouldComponentUpdate";
+import GetSnapshotBeforeUpdate from "./components/GetSnapshotBeforeUpdate";
+import ComponentWillUnmount from "./components/ComponentWillUnmount";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       name: "This name will change in 3 seconds.",
+      show: true,
     };
   }
 
@@ -25,8 +29,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>{this.state.name}</p>
-        <ChildComponent />
+        {/* <p>{this.state.name}</p> */}
+        {/* <ChildComponent /> */}
+        <ShouldComponentUpdate />
+        <GetSnapshotBeforeUpdate />
+        <br />
+        {this.state.show ? <ComponentWillUnmount /> : null}
+        <br />
+        {/* Toggle button */}
+        <button onClick={() => this.setState({ show: !this.state.show })}>
+          {this.state.show ? "Unmount Component" : "Mount Component"}
+        </button>
       </div>
     );
   }
