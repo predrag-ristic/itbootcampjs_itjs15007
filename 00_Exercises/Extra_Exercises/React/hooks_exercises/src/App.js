@@ -1,10 +1,12 @@
 import "./App.css";
-import Form from "./components/Form";
+// import Select from "./components/Select";
+import SongList from "./components/SongList";
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      {/* <Select /> */}
+      <SongList />
     </div>
   );
 }
