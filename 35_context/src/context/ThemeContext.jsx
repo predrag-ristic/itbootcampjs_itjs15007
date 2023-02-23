@@ -1,9 +1,8 @@
 import React, { useState, createContext } from "react";
-import ThemeToggle from "../components/ThemeToggle";
 
 export const ThemeContext = createContext()
 
-const ThemeContextProvider = () => {
+const ThemeContextProvider = ({ children }) => {
     const [state, setState] = useState({
         isLightTheme: true,
         light: { syntax: '#555', ui: '#ddd', bg: '#eee' },
@@ -19,7 +18,7 @@ const ThemeContextProvider = () => {
 
     return (
         <ThemeContext.Provider value={{ ...state, toggleTheme }}>
-            <ThemeToggle />
+            {children}
         </ThemeContext.Provider>
     )
 }

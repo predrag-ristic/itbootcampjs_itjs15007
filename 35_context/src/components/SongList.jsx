@@ -11,18 +11,17 @@ const SongList = () => {
         <div>
             <h2>My Song List:</h2>
             <ul
-                style={
-                    {
-                        background: theme.bg,
-                        width: '50%',
-                        marginleft: '50%',
-                        transform: 'translate(-50%)',
-                    }
-                }
+                style={{
+                    background: theme.bg,
+                    width: '50%',
+                    marginLeft: '50%',
+                    transform: 'translate(-50%)',
+                }}
             >
                 {songs.map(song => {
                     return (
-                        <li key={song.id}
+                        <li
+                            key={song.id}
                             style={{
                                 background: theme.ui,
                                 color: theme.syntax
