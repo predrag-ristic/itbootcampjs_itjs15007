@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid'
 
 // action: {
-//     tyle: "Switch value",
+//     type: "Switch value",
 //     payload: {
 //         title: '',
 //         author: '',
