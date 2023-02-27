@@ -34,11 +34,11 @@ const ToDoForm = () => {
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
-                    placeholder="Add an item"
+                    placeholder="Add a To Do Item"
                     value={newItem}
                     onChange={(e) => setNewItem(e.target.value)}
                 />
-                <button type="submit">Add</button>
+                <button type="submit">+</button>
             </form>
 
             <ul>
